@@ -1,0 +1,21 @@
+[0.707s] Invoking command in '/home/redi/examples/litter': PYTHONPATH=/home/redi/examples/build/litter/prefix_override:/home/redi/examples/install/litter/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/litter build --build-base /home/redi/examples/build/litter/build install --record /home/redi/examples/build/litter/install.log --install-scripts $base/lib/litter --single-version-externally-managed
+[0.947s] running egg_info
+[0.947s] writing ../build/litter/litter.egg-info/PKG-INFO
+[0.947s] writing dependency_links to ../build/litter/litter.egg-info/dependency_links.txt
+[0.948s] writing entry points to ../build/litter/litter.egg-info/entry_points.txt
+[0.948s] writing requirements to ../build/litter/litter.egg-info/requires.txt
+[0.948s] writing top-level names to ../build/litter/litter.egg-info/top_level.txt
+[0.979s] reading manifest file '../build/litter/litter.egg-info/SOURCES.txt'
+[0.980s] writing manifest file '../build/litter/litter.egg-info/SOURCES.txt'
+[0.980s] running build
+[0.980s] running build_py
+[0.980s] running install
+[0.981s] running install_lib
+[0.983s] running install_data
+[0.983s] running install_egg_info
+[0.985s] removing '/home/redi/examples/install/litter/lib/python3.8/site-packages/litter-0.0.0-py3.8.egg-info' (and everything under it)
+[0.985s] Copying ../build/litter/litter.egg-info to /home/redi/examples/install/litter/lib/python3.8/site-packages/litter-0.0.0-py3.8.egg-info
+[0.986s] running install_scripts
+[1.003s] Installing robot_driver script to /home/redi/examples/install/litter/lib/litter
+[1.003s] writing list of installed files to '/home/redi/examples/build/litter/install.log'
+[1.024s] Invoked command in '/home/redi/examples/litter' returned '0': PYTHONPATH=/home/redi/examples/build/litter/prefix_override:/home/redi/examples/install/litter/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/litter build --build-base /home/redi/examples/build/litter/build install --record /home/redi/examples/build/litter/install.log --install-scripts $base/lib/litter --single-version-externally-managed

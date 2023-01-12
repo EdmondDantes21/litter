@@ -1,0 +1,3 @@
+[console_scripts]
+my_robot_driver = collision_avoidance.collision_avoidance_driver:main
+

@@ -1,0 +1,36 @@
+running egg_info
+creating ../build/collision_avoidance/collision_avoidance.egg-info
+writing ../build/collision_avoidance/collision_avoidance.egg-info/PKG-INFO
+writing dependency_links to ../build/collision_avoidance/collision_avoidance.egg-info/dependency_links.txt
+writing entry points to ../build/collision_avoidance/collision_avoidance.egg-info/entry_points.txt
+writing requirements to ../build/collision_avoidance/collision_avoidance.egg-info/requires.txt
+writing top-level names to ../build/collision_avoidance/collision_avoidance.egg-info/top_level.txt
+writing manifest file '../build/collision_avoidance/collision_avoidance.egg-info/SOURCES.txt'
+reading manifest file '../build/collision_avoidance/collision_avoidance.egg-info/SOURCES.txt'
+writing manifest file '../build/collision_avoidance/collision_avoidance.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/redi/examples/build/collision_avoidance/build
+creating /home/redi/examples/build/collision_avoidance/build/lib
+creating /home/redi/examples/build/collision_avoidance/build/lib/collision_avoidance
+copying collision_avoidance/__init__.py -> /home/redi/examples/build/collision_avoidance/build/lib/collision_avoidance
+copying collision_avoidance/collision_avoidance_driver.py -> /home/redi/examples/build/collision_avoidance/build/lib/collision_avoidance
+running install
+running install_lib
+creating /home/redi/examples/install/collision_avoidance/lib/python3.8/site-packages/collision_avoidance
+copying /home/redi/examples/build/collision_avoidance/build/lib/collision_avoidance/__init__.py -> /home/redi/examples/install/collision_avoidance/lib/python3.8/site-packages/collision_avoidance
+copying /home/redi/examples/build/collision_avoidance/build/lib/collision_avoidance/collision_avoidance_driver.py -> /home/redi/examples/install/collision_avoidance/lib/python3.8/site-packages/collision_avoidance
+byte-compiling /home/redi/examples/install/collision_avoidance/lib/python3.8/site-packages/collision_avoidance/__init__.py to __init__.cpython-38.pyc
+byte-compiling /home/redi/examples/install/collision_avoidance/lib/python3.8/site-packages/collision_avoidance/collision_avoidance_driver.py to collision_avoidance_driver.cpython-38.pyc
+running install_data
+creating /home/redi/examples/install/collision_avoidance/share/collision_avoidance/launch
+copying launch/robot_launch.py -> /home/redi/examples/install/collision_avoidance/share/collision_avoidance/launch
+creating /home/redi/examples/install/collision_avoidance/share/collision_avoidance/worlds
+copying worlds/my_world.wbt -> /home/redi/examples/install/collision_avoidance/share/collision_avoidance/worlds
+creating /home/redi/examples/install/collision_avoidance/share/collision_avoidance/resource
+copying resource/my_robot.urdf -> /home/redi/examples/install/collision_avoidance/share/collision_avoidance/resource
+running install_egg_info
+Copying ../build/collision_avoidance/collision_avoidance.egg-info to /home/redi/examples/install/collision_avoidance/lib/python3.8/site-packages/collision_avoidance-0.0.0-py3.8.egg-info
+running install_scripts
+Installing my_robot_driver script to /home/redi/examples/install/collision_avoidance/lib/collision_avoidance
+writing list of installed files to '/home/redi/examples/build/collision_avoidance/install.log'

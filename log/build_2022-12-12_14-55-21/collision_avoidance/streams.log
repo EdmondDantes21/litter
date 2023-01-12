@@ -1,0 +1,25 @@
+[0.713s] Invoking command in '/home/redi/examples/collision_avoidance': PYTHONPATH=/home/redi/examples/build/collision_avoidance/prefix_override:/home/redi/examples/install/collision_avoidance/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/collision_avoidance build --build-base /home/redi/examples/build/collision_avoidance/build install --record /home/redi/examples/build/collision_avoidance/install.log --install-scripts $base/lib/collision_avoidance --single-version-externally-managed
+[0.965s] running egg_info
+[0.965s] writing ../build/collision_avoidance/collision_avoidance.egg-info/PKG-INFO
+[0.965s] writing dependency_links to ../build/collision_avoidance/collision_avoidance.egg-info/dependency_links.txt
+[0.966s] writing entry points to ../build/collision_avoidance/collision_avoidance.egg-info/entry_points.txt
+[0.966s] writing requirements to ../build/collision_avoidance/collision_avoidance.egg-info/requires.txt
+[0.966s] writing top-level names to ../build/collision_avoidance/collision_avoidance.egg-info/top_level.txt
+[0.997s] reading manifest file '../build/collision_avoidance/collision_avoidance.egg-info/SOURCES.txt'
+[0.998s] writing manifest file '../build/collision_avoidance/collision_avoidance.egg-info/SOURCES.txt'
+[0.998s] running build
+[0.998s] running build_py
+[0.998s] copying collision_avoidance/collision_avoidance_driver.py -> /home/redi/examples/build/collision_avoidance/build/lib/collision_avoidance
+[0.999s] running install
+[0.999s] running install_lib
+[1.000s] copying /home/redi/examples/build/collision_avoidance/build/lib/collision_avoidance/collision_avoidance_driver.py -> /home/redi/examples/install/collision_avoidance/lib/python3.8/site-packages/collision_avoidance
+[1.001s] byte-compiling /home/redi/examples/install/collision_avoidance/lib/python3.8/site-packages/collision_avoidance/collision_avoidance_driver.py to collision_avoidance_driver.cpython-38.pyc
+[1.002s] running install_data
+[1.003s] copying launch/robot_launch.py -> /home/redi/examples/install/collision_avoidance/share/collision_avoidance/launch
+[1.003s] running install_egg_info
+[1.004s] removing '/home/redi/examples/install/collision_avoidance/lib/python3.8/site-packages/collision_avoidance-0.0.0-py3.8.egg-info' (and everything under it)
+[1.005s] Copying ../build/collision_avoidance/collision_avoidance.egg-info to /home/redi/examples/install/collision_avoidance/lib/python3.8/site-packages/collision_avoidance-0.0.0-py3.8.egg-info
+[1.005s] running install_scripts
+[1.022s] Installing my_robot_driver script to /home/redi/examples/install/collision_avoidance/lib/collision_avoidance
+[1.022s] writing list of installed files to '/home/redi/examples/build/collision_avoidance/install.log'
+[1.043s] Invoked command in '/home/redi/examples/collision_avoidance' returned '0': PYTHONPATH=/home/redi/examples/build/collision_avoidance/prefix_override:/home/redi/examples/install/collision_avoidance/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/collision_avoidance build --build-base /home/redi/examples/build/collision_avoidance/build install --record /home/redi/examples/build/collision_avoidance/install.log --install-scripts $base/lib/collision_avoidance --single-version-externally-managed

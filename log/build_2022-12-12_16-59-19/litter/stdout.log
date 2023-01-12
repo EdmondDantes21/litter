@@ -1,0 +1,38 @@
+running egg_info
+creating ../build/litter/litter.egg-info
+writing ../build/litter/litter.egg-info/PKG-INFO
+writing dependency_links to ../build/litter/litter.egg-info/dependency_links.txt
+writing entry points to ../build/litter/litter.egg-info/entry_points.txt
+writing requirements to ../build/litter/litter.egg-info/requires.txt
+writing top-level names to ../build/litter/litter.egg-info/top_level.txt
+writing manifest file '../build/litter/litter.egg-info/SOURCES.txt'
+reading manifest file '../build/litter/litter.egg-info/SOURCES.txt'
+writing manifest file '../build/litter/litter.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/redi/examples/build/litter/build
+creating /home/redi/examples/build/litter/build/lib
+creating /home/redi/examples/build/litter/build/lib/litter
+copying litter/__init__.py -> /home/redi/examples/build/litter/build/lib/litter
+copying litter/supervisor_controller.py -> /home/redi/examples/build/litter/build/lib/litter
+copying litter/robot_driver.py -> /home/redi/examples/build/litter/build/lib/litter
+running install
+running install_lib
+creating /home/redi/examples/install/litter/lib/python3.8/site-packages/litter
+copying /home/redi/examples/build/litter/build/lib/litter/__init__.py -> /home/redi/examples/install/litter/lib/python3.8/site-packages/litter
+copying /home/redi/examples/build/litter/build/lib/litter/supervisor_controller.py -> /home/redi/examples/install/litter/lib/python3.8/site-packages/litter
+copying /home/redi/examples/build/litter/build/lib/litter/robot_driver.py -> /home/redi/examples/install/litter/lib/python3.8/site-packages/litter
+byte-compiling /home/redi/examples/install/litter/lib/python3.8/site-packages/litter/__init__.py to __init__.cpython-38.pyc
+byte-compiling /home/redi/examples/install/litter/lib/python3.8/site-packages/litter/supervisor_controller.py to supervisor_controller.cpython-38.pyc
+byte-compiling /home/redi/examples/install/litter/lib/python3.8/site-packages/litter/robot_driver.py to robot_driver.cpython-38.pyc
+running install_data
+creating /home/redi/examples/install/litter/share/ament_index
+creating /home/redi/examples/install/litter/share/ament_index/resource_index
+creating /home/redi/examples/install/litter/share/ament_index/resource_index/packages
+copying resource/litter -> /home/redi/examples/install/litter/share/ament_index/resource_index/packages
+copying package.xml -> /home/redi/examples/install/litter/share/litter
+running install_egg_info
+Copying ../build/litter/litter.egg-info to /home/redi/examples/install/litter/lib/python3.8/site-packages/litter-0.0.0-py3.8.egg-info
+running install_scripts
+Installing robot_driver script to /home/redi/examples/install/litter/lib/litter
+writing list of installed files to '/home/redi/examples/build/litter/install.log'
