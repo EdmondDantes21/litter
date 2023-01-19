@@ -1,0 +1,9 @@
+- name: "throw_garbage"
+  priority: 0.9
+  deadline: 10000
+  value: 
+    - name: "at_gar"
+      pddl-type: 2
+      params:
+        - "g1"
+        - "t1"
