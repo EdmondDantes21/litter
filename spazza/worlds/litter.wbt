@@ -10,8 +10,8 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/project
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.36196537109886023 0.4472478553157453 0.8178938965664987 1.5602626156944042
-  position -0.7113890674868636 -2.961469292728271 3.4504450975549994
+  orientation -0.025355264939445017 0.9981613868499901 0.05505412193064821 0.8646986781124545
+  position -1.1848430110751471 0.7047733255010238 0.611586252597724
 }
 TexturedBackground {
 }
@@ -136,7 +136,7 @@ Solid {
 }
 DEF e_puck E-puck {
   translation -0.58 0.58 0
-  rotation 0 0 1 -1.5707996938995747
+  rotation 0 0 1 1.5707996938995747
   name "e_puck"
   controller "<extern>"
 }

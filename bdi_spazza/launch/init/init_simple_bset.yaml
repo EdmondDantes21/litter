@@ -1,0 +1,58 @@
+- name: "r"
+  pddl-type: 1
+  type: "robot"
+
+- name: "t1"
+  pddl-type: 1
+  type: "tile"
+
+- name: "t2"
+  pddl-type: 1
+  type: "tile"
+
+- name: "b"
+  pddl-type: 1
+  type: "bin"
+
+- name: "g"
+  pddl-type: 1
+  type: "garbage"
+
+- name: "adjacent"
+  pddl-type: 2
+  params:
+    - "t1"
+    - "t2"
+
+- name: "walkable"
+  pddl-type: 2
+  params:
+    - "t1"
+
+- name: "walkable"
+  pddl-type: 2
+  params:
+    - "t2"
+
+- name: "free"
+  pddl-type: 2
+  params: 
+    - "r"
+
+- name: "at_bin"
+  pddl-type: 2
+  params: 
+    - "b"
+    - "t1"
+
+- name: "at_rob"
+  pddl-type: 2
+  params: 
+    - "r"
+    - "t1"
+
+- name: "at_gar"
+  pddl_type: 2
+  params:
+    - "g"
+    - "t2"

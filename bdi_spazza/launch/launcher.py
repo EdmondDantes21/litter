@@ -11,7 +11,7 @@ def generate_launch_description():
     ROBOT_NAME = "e_puck"
     ROBOT_GROUP_NAME = "robots"
 
-    bdi_tests_share_dir = get_package_share_directory('bdi_spazza')
+    bdi_spazza_share_dir = get_package_share_directory('bdi_spazza')
 
     # perform moving toward
     action_move = AgentAction(
@@ -38,9 +38,9 @@ def generate_launch_description():
         agent_id=ROBOT_NAME,
         agent_group=ROBOT_GROUP_NAME,
         init_params={
-            'pddl_file': bdi_tests_share_dir + '/pddl/spazza_domain.pddl',
-            'init_bset': bdi_tests_share_dir + '/launch/init/init_bset.yaml',
-            'init_dset': bdi_tests_share_dir + '/launch/init/init_dset.yaml',
+            'pddl_file': bdi_spazza_share_dir + '/pddl/spazza-domain.pddl',
+            'init_bset': bdi_spazza_share_dir + '/launch/init/init_simple_bset.yaml',
+            'init_dset': bdi_spazza_share_dir + '/launch/init/init_simple_dset.yaml',
             'belief_ck': [ROBOT_GROUP_NAME],   
             'belief_w':  [ROBOT_GROUP_NAME],   
             'desire_ck': [ROBOT_GROUP_NAME],   

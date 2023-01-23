@@ -4,13 +4,14 @@ from rclpy.node import Node
 from rosgraph_msgs.msg import Clock
 from builtin_interfaces.msg import Time
 from geometry_msgs.msg import Point
+from spazza_interfaces.msg import Position
 
 MOVE_BOX_TIME = 5
 ADD_GARBAGE_TIME = 10
-ROBOT_POSITION_UPDATE_RATE = 0.1 #how often the position is refreshed, in seconds
+ROBOT_POSITION_UPDATE_RATE = 0.05 #how often the position is refreshed, in seconds
 
 class SupervisorController:
-    def init(self, webots_node, properties):
+    def init(self, webots_node, properties):    
         self.__robot = webots_node.robot
         self.__time = 0
         self.__path_blocked = False
@@ -36,7 +37,7 @@ class SupervisorController:
         self.clock_subscription  # prevent unused variable warning
 
         self.robot_position_publisher = self.__node.create_publisher(
-            Point, 'robot_position', 32)
+            Position, 'robot_position', 32)
         self.robot_position_timer = self.__node.create_timer(
             ROBOT_POSITION_UPDATE_RATE, self.robot_position_timer_callback)
 
@@ -73,14 +74,17 @@ class SupervisorController:
                 self.__second_trash_positioned = True
 
     #publishes into topic 'robot position' the position of the robot
-    #geometry_msgs/Point
+    #spazza_interfaces/msg/Position
     def robot_position_timer_callback(self):
         position = self.__e_puck.getPosition()
+        orientation = self.__e_puck.getField('rotation') #get angle
 
-        msg = Point()
+        msg = Position()
         msg.x = position[0]
         msg.y = position[1]
-        msg.z = position[2]
+        msg.theta = orientation.getSFRotation()[3]
+
+        #self.__node.get_logger().info('x: %f, y: %f, z: %f, theta: %f' %(orientation_values[0], orientation_values[1], orientation_values[2], orientation_values[3]))
 
         self.robot_position_publisher.publish(msg)
         
