@@ -24,7 +24,7 @@ find_package(geometry_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)  
 
 
-set(bdi_act_client_dep
+set(psys2_act_client_dep
     rclcpp
     rclcpp_action
     plansys2_msgs
@@ -51,13 +51,13 @@ set(sensors_dep
   ros2_bdi_core
 )
 
-add_executable(move src/actions/move.cpp)
+add_executable(move src/actions/e_puck/move.cpp)
 ament_target_dependencies(move ${bdi_act_client_dep})
 
-add_executable(pickup src/actions/move.cpp)
+add_executable(pickup src/actions/e_puck/pickup.cpp)
 ament_target_dependencies(pickup ${bdi_act_client_dep})
 
-add_executable(putdown src/actions/move.cpp)
+add_executable(putdown src/actions/e_puck/putdown.cpp)
 ament_target_dependencies(putdown ${bdi_act_client_dep})
 
 
