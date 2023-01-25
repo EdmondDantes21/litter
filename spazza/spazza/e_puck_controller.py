@@ -1,11 +1,10 @@
 import rclpy
-import math
 
 from spazza_interfaces.msg import Position
 from spazza_interfaces.msg import Pose
-from geometry_msgs.msg import Point
 from std_msgs.msg import Int16
 
+import math
 
 HALF_DISTANCE_BETWEEN_WHEELS = 0.045
 WHEEL_RADIUS = 0.025
@@ -13,18 +12,21 @@ TIME_STEP = 64
 MAX_SPEED = 6.28
 PI = 3.14159
 ADMISSIBLE_ERROR = 0.01
-ROTATIONAL_SPEED = 0.05
-LINEAR_SPEED = 0.15
+ANGULAR_SPEED = 0.04
+LINEAR_SPEED = 0.2
 TILE_SIZE = 0.29  # size of the physical square in the simulation
 HALF_TILE_SIZE = TILE_SIZE / 2
 N_TILES = 7
-
 
 class MyRobotDriver:
     def init(self, webots_node, properties):
         self.__robot = webots_node.robot
         self.rotating = False
         self.moving = False
+        self.current_tile_target = -1  # initially no target
+        self.target_x = 0.0 
+        self.target_y = 0.0
+        self.target_theta = 0.0
 
         self.__left_motor = self.__robot.getDevice('left wheel motor')
         self.__right_motor = self.__robot.getDevice('right wheel motor')
@@ -41,10 +43,10 @@ class MyRobotDriver:
 
         self.__node = rclpy.create_node(self.__robot.getName()+'_driver')
 
-        #move receives the tile number where to move to
+        # move receives the tile number where to move to
         self.move_subscription = self.__node.create_subscription(
             Int16,
-            'move',
+            'e_puck/move',
             self.move_callback,
             10
         )
@@ -61,52 +63,52 @@ class MyRobotDriver:
         rclpy.spin_once(self.__node, timeout_sec=0)
 
         # stop rotating
-        if self.rotating and abs(self.target_theta - self.theta) < ADMISSIBLE_ERROR:
-            self.__left_motor.setVelocity(0)
-            self.__right_motor.setVelocity(0)
+        if self.rotating and abs(self.theta - self.target_theta) < ADMISSIBLE_ERROR and abs(self.target_theta - self.theta) < ADMISSIBLE_ERROR:
+            self.stop_motor()
             self.rotating = False
+            self.move_robot()
             self.moving = True
-            self.move_after_rotation_is_complete()
 
         # stop moving forward
         if self.moving and abs(self.x - self.target_x) < ADMISSIBLE_ERROR and abs(self.y - self.target_y) < ADMISSIBLE_ERROR:
-            self.__left_motor.setVelocity(0)
-            self.__right_motor.setVelocity(0)
+            self.stop_motor()
             self.moving = False
 
     # callback upon receiving move message
     def move_callback(self, msg):
-        self.__node.get_logger().info('I was told to move to tile number %d' % (msg.data))
+        if (msg.data != self.current_tile_target):
+            self.current_tile_target = msg.data
+            self.__node.get_logger().info('I was told to move to tile number %d' % (msg.data))
 
-        # coordinates target
-        self.target_x = self.tile_x(msg.data)
-        self.target_y = self.tile_y(msg.data)
+            self.target_x = self.get_x_coordinate_from_tile_number(msg.data) 
+            self.target_y = self.get_y_coordinate_from_tile_number(msg.data)
+            delta_y = self.target_y - self.y
+            delta_x = self.target_x - self.x
+            theta = math.fabs(math.atan(delta_y / delta_x)) if self.target_y > self.y else math.fabs(math.atan(delta_x / delta_y)) #angle between robot and target
 
-        self.__node.get_logger().info('target_x: %f, target_y: %f' %(self.target_x, self.target_y))
+            if self.target_y > self.y:
+                self.target_theta = theta if self.target_x > self.x  else math.pi - theta
+            else:
+                self.target_theta = -math.pi / 2 - theta if self.target_x < self.x else -math.pi / 2 + theta
+            self.__node.get_logger().info('target_x: %f, target_y: %f' %(self.target_x, self.target_y))
+            self.__node.get_logger().info('target_theta: %f' %(self.target_theta))
 
-        # calculating the angle of the objective w.r.t. the robot's position
-        self.target_theta = self.compute_target_theta(self.x, self.y, self.target_x, self.target_y)
-        self.__node.get_logger().info('target_theta: %f' %(self.target_theta))
+            self.rotating = True
+            self.__left_motor.setPosition(float('inf'))
+            self.__right_motor.setPosition(float('inf'))
 
-        # deciding whether to turn left or right
-        go_left = True if self.target_theta > 0 else False
+            # turning motors left
+            self.__left_motor.setVelocity(ANGULAR_SPEED * MAX_SPEED)
+            self.__right_motor.setVelocity(-ANGULAR_SPEED * MAX_SPEED)
 
-        # adjusting the robot's rotation
-        self.__left_motor.setPosition(float('inf'))
-        self.__right_motor.setPosition(float('inf'))
-
-        if not go_left:
-            self.__left_motor.setVelocity(-ROTATIONAL_SPEED * MAX_SPEED)
-            self.__right_motor.setVelocity(ROTATIONAL_SPEED * MAX_SPEED)
-        else:
-            self.__left_motor.setVelocity(ROTATIONAL_SPEED * MAX_SPEED)
-            self.__right_motor.setVelocity(-ROTATIONAL_SPEED * MAX_SPEED)
-        self.rotating = True
-
-    #after rotation is complete this function, which moves the robot forwards, is called
-    def move_after_rotation_is_complete(self):
+    # after rotation is complete this function, which moves the robot forwards, is called
+    def move_robot(self):
         self.__left_motor.setVelocity(LINEAR_SPEED * MAX_SPEED)
         self.__right_motor.setVelocity(LINEAR_SPEED * MAX_SPEED)
+
+    def stop_motor(self):
+        self.__left_motor.setVelocity(0)
+        self.__right_motor.setVelocity(0)
 
     # update robot position
     def position_callback(self, msg):
@@ -116,28 +118,18 @@ class MyRobotDriver:
 
     # x coordinates given tile number
     @staticmethod
-    def tile_x(i):
-        distance_from_margin = i % N_TILES * TILE_SIZE + HALF_TILE_SIZE #distance from the top margin
-        half_board = (N_TILES // 2) * TILE_SIZE + HALF_TILE_SIZE #half of the board
+    def get_x_coordinate_from_tile_number(i):
+        distance_from_margin = i % N_TILES * TILE_SIZE + \
+            HALF_TILE_SIZE  # distance from the top margin
+        half_board = (N_TILES // 2) * TILE_SIZE + \
+            HALF_TILE_SIZE  # half of the board
         return -(half_board - distance_from_margin)
 
     # y coordinates given tile number
     @staticmethod
-    def tile_y(i):
-        distance_from_margin = (i // N_TILES) * TILE_SIZE + HALF_TILE_SIZE #distance from the left hand side margin
-        half_board = (N_TILES // 2) * TILE_SIZE + HALF_TILE_SIZE #half of the board
+    def get_y_coordinate_from_tile_number(i):
+        # distance from the left hand side margin
+        distance_from_margin = (i // N_TILES) * TILE_SIZE + HALF_TILE_SIZE
+        half_board = (N_TILES // 2) * TILE_SIZE + \
+            HALF_TILE_SIZE  # half of the board
         return half_board - distance_from_margin
-
-    @staticmethod
-    def compute_target_theta(x, y, target_x, target_y):
-        theta = None
-        if (x < target_x):
-            theta = math.atan(abs(y - target_y) / abs(x - target_x)) if x != target_x else 0
-        else:
-            theta = math.atan(abs(x - target_x) / abs(y - target_y)) + PI / 2 if y != target_y else 0
-        
-        if (y > target_y):
-            theta = -theta
-
-        return theta
-

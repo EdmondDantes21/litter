@@ -8,7 +8,7 @@ from spazza_interfaces.msg import Position
 
 MOVE_BOX_TIME = 5
 ADD_GARBAGE_TIME = 10
-ROBOT_POSITION_UPDATE_RATE = 0.05 #how often the position is refreshed, in seconds
+ROBOT_POSITION_UPDATE_RATE = 0.01 #how often the position is refreshed, in seconds
 
 class SupervisorController:
     def init(self, webots_node, properties):    
