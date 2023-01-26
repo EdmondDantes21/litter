@@ -3,7 +3,7 @@ from setuptools import setup
 package_name = 'spazza'
 data_files = []
 data_files.append(('share/ament_index/resource_index/packages', ['resource/' + package_name]))
-data_files.append(('share/' + package_name + '/launch', ['launch/launcher.py']))
+data_files.append(('share/' + package_name + '/launch', ['launch/launcher.launch.py']))
 data_files.append(('share/' + package_name + '/worlds', ['worlds/litter.wbt']))
 data_files.append(('share/' + package_name + '/resource', ['resource/e_puck.urdf']))
 data_files.append(('share/' + package_name + '/resource', ['resource/supervisor.urdf']))

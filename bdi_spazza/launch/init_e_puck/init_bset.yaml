@@ -194,7 +194,7 @@
   pddl_type: 2
   params:
     - "e_puck"
-    - "t1"
+    - "t8"
 - name: "free"
   pddl_type: 2
   params:
@@ -338,14 +338,14 @@
   pddl_type: 2
   params: 
     - "t31"
+# - name: "walkable"
+#   pddl_type: 2
+#   params: 
+#     - "t32"
 - name: "walkable"
   pddl_type: 2
   params: 
-    - "t32"
-#- name: "walkable"
-  #pddl_type: 2
-  #params: 
-    #- "t33"
+    - "t33"
 - name: "walkable"
   pddl_type: 2
   params: 
@@ -366,14 +366,14 @@
   pddl_type: 2
   params: 
     - "t38"
+# - name: "walkable"
+#   pddl_type: 2
+#   params: 
+#     - "t39"
 - name: "walkable"
   pddl_type: 2
   params: 
-    - "t39"
-#- name: "walkable"
-  #pddl_type: 2
-  #params: 
-    #- "t40"
+    - "t40"
 - name: "walkable"
   pddl_type: 2
   params: 
@@ -436,7 +436,7 @@
   pddl_type: 2
   params: 
     - "b6"
-    - "t33"
+    - "t32"
 - name: "at_box"
   pddl_type: 2
   params: 
@@ -451,7 +451,7 @@
   pddl_type: 2
   params: 
     - "b9"
-    - "t40"
+    - "t39"
 #declaring adjacent tiles
 - name: "adjacent"
   pddl_type: 2
@@ -466,11 +466,6 @@
 - name: "adjacent"
   pddl_type: 2
   params: 
-    - "t0"
-    - "t8"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
     - "t1"
     - "t8"
 - name: "adjacent"
@@ -486,16 +481,6 @@
 - name: "adjacent"
   pddl_type: 2
   params: 
-    - "t1"
-    - "t7"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t1"
-    - "t9"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
     - "t2"
     - "t9"
 - name: "adjacent"
@@ -508,16 +493,6 @@
   params: 
     - "t2"
     - "t1"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t2"
-    - "t8"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t2"
-    - "t10"
 - name: "adjacent"
   pddl_type: 2
   params: 
@@ -533,16 +508,6 @@
   params: 
     - "t3"
     - "t2"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t3"
-    - "t9"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t3"
-    - "t11"
 - name: "adjacent"
   pddl_type: 2
   params: 
@@ -558,16 +523,6 @@
   params: 
     - "t4"
     - "t3"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t4"
-    - "t10"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t4"
-    - "t12"
 - name: "adjacent"
   pddl_type: 2
   params: 
@@ -583,16 +538,6 @@
   params: 
     - "t5"
     - "t4"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t5"
-    - "t11"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t5"
-    - "t13"
 - name: "adjacent"
   pddl_type: 2
   params: 
@@ -603,11 +548,6 @@
   params: 
     - "t6"
     - "t5"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t6"
-    - "t12"
 - name: "adjacent"
   pddl_type: 2
   params: 
@@ -626,16 +566,6 @@
 - name: "adjacent"
   pddl_type: 2
   params: 
-    - "t7"
-    - "t15"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t7"
-    - "t1"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
     - "t8"
     - "t15"
 - name: "adjacent"
@@ -653,26 +583,6 @@
   params: 
     - "t8"
     - "t7"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t8"
-    - "t14"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t8"
-    - "t16"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t8"
-    - "t0"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t8"
-    - "t2"
 - name: "adjacent"
   pddl_type: 2
   params: 
@@ -693,26 +603,6 @@
   params: 
     - "t9"
     - "t8"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t9"
-    - "t15"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t9"
-    - "t17"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t9"
-    - "t1"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t9"
-    - "t3"
 - name: "adjacent"
   pddl_type: 2
   params: 
@@ -733,26 +623,6 @@
   params: 
     - "t10"
     - "t9"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t10"
-    - "t16"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t10"
-    - "t18"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t10"
-    - "t2"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t10"
-    - "t4"
 - name: "adjacent"
   pddl_type: 2
   params: 
@@ -773,26 +643,6 @@
   params: 
     - "t11"
     - "t10"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t11"
-    - "t17"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t11"
-    - "t19"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t11"
-    - "t3"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t11"
-    - "t5"
 - name: "adjacent"
   pddl_type: 2
   params: 
@@ -813,26 +663,6 @@
   params: 
     - "t12"
     - "t11"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t12"
-    - "t18"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t12"
-    - "t20"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t12"
-    - "t4"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t12"
-    - "t6"
 - name: "adjacent"
   pddl_type: 2
   params: 
@@ -851,16 +681,6 @@
 - name: "adjacent"
   pddl_type: 2
   params: 
-    - "t13"
-    - "t19"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t13"
-    - "t5"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
     - "t14"
     - "t21"
 - name: "adjacent"
@@ -876,16 +696,6 @@
 - name: "adjacent"
   pddl_type: 2
   params: 
-    - "t14"
-    - "t22"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t14"
-    - "t8"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
     - "t15"
     - "t22"
 - name: "adjacent"
@@ -903,26 +713,6 @@
   params: 
     - "t15"
     - "t14"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t15"
-    - "t21"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t15"
-    - "t23"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t15"
-    - "t7"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t15"
-    - "t9"
 - name: "adjacent"
   pddl_type: 2
   params: 
@@ -943,26 +733,6 @@
   params: 
     - "t16"
     - "t15"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t16"
-    - "t22"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t16"
-    - "t24"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t16"
-    - "t8"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t16"
-    - "t10"
 - name: "adjacent"
   pddl_type: 2
   params: 
@@ -983,26 +753,6 @@
   params: 
     - "t17"
     - "t16"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t17"
-    - "t23"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t17"
-    - "t25"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t17"
-    - "t9"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t17"
-    - "t11"
 - name: "adjacent"
   pddl_type: 2
   params: 
@@ -1023,26 +773,6 @@
   params: 
     - "t18"
     - "t17"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t18"
-    - "t24"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t18"
-    - "t26"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t18"
-    - "t10"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t18"
-    - "t12"
 - name: "adjacent"
   pddl_type: 2
   params: 
@@ -1063,26 +793,6 @@
   params: 
     - "t19"
     - "t18"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t19"
-    - "t25"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t19"
-    - "t27"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t19"
-    - "t11"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t19"
-    - "t13"
 - name: "adjacent"
   pddl_type: 2
   params: 
@@ -1101,16 +811,6 @@
 - name: "adjacent"
   pddl_type: 2
   params: 
-    - "t20"
-    - "t26"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t20"
-    - "t12"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
     - "t21"
     - "t28"
 - name: "adjacent"
@@ -1126,16 +826,6 @@
 - name: "adjacent"
   pddl_type: 2
   params: 
-    - "t21"
-    - "t29"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t21"
-    - "t15"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
     - "t22"
     - "t29"
 - name: "adjacent"
@@ -1153,26 +843,6 @@
   params: 
     - "t22"
     - "t21"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t22"
-    - "t28"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t22"
-    - "t30"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t22"
-    - "t14"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t22"
-    - "t16"
 - name: "adjacent"
   pddl_type: 2
   params: 
@@ -1193,26 +863,6 @@
   params: 
     - "t23"
     - "t22"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t23"
-    - "t29"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t23"
-    - "t31"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t23"
-    - "t15"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t23"
-    - "t17"
 - name: "adjacent"
   pddl_type: 2
   params: 
@@ -1233,26 +883,6 @@
   params: 
     - "t24"
     - "t23"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t24"
-    - "t30"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t24"
-    - "t32"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t24"
-    - "t16"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t24"
-    - "t18"
 - name: "adjacent"
   pddl_type: 2
   params: 
@@ -1273,26 +903,6 @@
   params: 
     - "t25"
     - "t24"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t25"
-    - "t31"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t25"
-    - "t33"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t25"
-    - "t17"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t25"
-    - "t19"
 - name: "adjacent"
   pddl_type: 2
   params: 
@@ -1313,26 +923,6 @@
   params: 
     - "t26"
     - "t25"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t26"
-    - "t32"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t26"
-    - "t34"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t26"
-    - "t18"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t26"
-    - "t20"
 - name: "adjacent"
   pddl_type: 2
   params: 
@@ -1351,16 +941,6 @@
 - name: "adjacent"
   pddl_type: 2
   params: 
-    - "t27"
-    - "t33"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t27"
-    - "t19"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
     - "t28"
     - "t35"
 - name: "adjacent"
@@ -1376,16 +956,6 @@
 - name: "adjacent"
   pddl_type: 2
   params: 
-    - "t28"
-    - "t36"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t28"
-    - "t22"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
     - "t29"
     - "t36"
 - name: "adjacent"
@@ -1403,26 +973,6 @@
   params: 
     - "t29"
     - "t28"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t29"
-    - "t35"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t29"
-    - "t37"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t29"
-    - "t21"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t29"
-    - "t23"
 - name: "adjacent"
   pddl_type: 2
   params: 
@@ -1443,26 +993,6 @@
   params: 
     - "t30"
     - "t29"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t30"
-    - "t36"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t30"
-    - "t38"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t30"
-    - "t22"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t30"
-    - "t24"
 - name: "adjacent"
   pddl_type: 2
   params: 
@@ -1483,26 +1013,6 @@
   params: 
     - "t31"
     - "t30"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t31"
-    - "t37"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t31"
-    - "t39"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t31"
-    - "t23"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t31"
-    - "t25"
 - name: "adjacent"
   pddl_type: 2
   params: 
@@ -1523,26 +1033,6 @@
   params: 
     - "t32"
     - "t31"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t32"
-    - "t38"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t32"
-    - "t40"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t32"
-    - "t24"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t32"
-    - "t26"
 - name: "adjacent"
   pddl_type: 2
   params: 
@@ -1563,26 +1053,6 @@
   params: 
     - "t33"
     - "t32"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t33"
-    - "t39"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t33"
-    - "t41"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t33"
-    - "t25"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t33"
-    - "t27"
 - name: "adjacent"
   pddl_type: 2
   params: 
@@ -1601,16 +1071,6 @@
 - name: "adjacent"
   pddl_type: 2
   params: 
-    - "t34"
-    - "t40"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t34"
-    - "t26"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
     - "t35"
     - "t42"
 - name: "adjacent"
@@ -1626,16 +1086,6 @@
 - name: "adjacent"
   pddl_type: 2
   params: 
-    - "t35"
-    - "t43"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t35"
-    - "t29"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
     - "t36"
     - "t43"
 - name: "adjacent"
@@ -1653,26 +1103,6 @@
   params: 
     - "t36"
     - "t35"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t36"
-    - "t42"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t36"
-    - "t44"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t36"
-    - "t28"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t36"
-    - "t30"
 - name: "adjacent"
   pddl_type: 2
   params: 
@@ -1693,26 +1123,6 @@
   params: 
     - "t37"
     - "t36"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t37"
-    - "t43"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t37"
-    - "t45"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t37"
-    - "t29"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t37"
-    - "t31"
 - name: "adjacent"
   pddl_type: 2
   params: 
@@ -1733,26 +1143,6 @@
   params: 
     - "t38"
     - "t37"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t38"
-    - "t44"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t38"
-    - "t46"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t38"
-    - "t30"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t38"
-    - "t32"
 - name: "adjacent"
   pddl_type: 2
   params: 
@@ -1773,26 +1163,6 @@
   params: 
     - "t39"
     - "t38"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t39"
-    - "t45"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t39"
-    - "t47"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t39"
-    - "t31"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t39"
-    - "t33"
 - name: "adjacent"
   pddl_type: 2
   params: 
@@ -1813,26 +1183,6 @@
   params: 
     - "t40"
     - "t39"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t40"
-    - "t46"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t40"
-    - "t48"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t40"
-    - "t32"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t40"
-    - "t34"
 - name: "adjacent"
   pddl_type: 2
   params: 
@@ -1851,16 +1201,6 @@
 - name: "adjacent"
   pddl_type: 2
   params: 
-    - "t41"
-    - "t47"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t41"
-    - "t33"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
     - "t42"
     - "t35"
 - name: "adjacent"
@@ -1871,11 +1211,6 @@
 - name: "adjacent"
   pddl_type: 2
   params: 
-    - "t42"
-    - "t36"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
     - "t43"
     - "t36"
 - name: "adjacent"
@@ -1891,16 +1226,6 @@
 - name: "adjacent"
   pddl_type: 2
   params: 
-    - "t43"
-    - "t35"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t43"
-    - "t37"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
     - "t44"
     - "t37"
 - name: "adjacent"
@@ -1913,16 +1238,6 @@
   params: 
     - "t44"
     - "t43"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t44"
-    - "t36"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t44"
-    - "t38"
 - name: "adjacent"
   pddl_type: 2
   params: 
@@ -1938,16 +1253,6 @@
   params: 
     - "t45"
     - "t44"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t45"
-    - "t37"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t45"
-    - "t39"
 - name: "adjacent"
   pddl_type: 2
   params: 
@@ -1963,16 +1268,6 @@
   params: 
     - "t46"
     - "t45"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t46"
-    - "t38"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t46"
-    - "t40"
 - name: "adjacent"
   pddl_type: 2
   params: 
@@ -1988,16 +1283,6 @@
   params: 
     - "t47"
     - "t46"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t47"
-    - "t39"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t47"
-    - "t41"
 - name: "adjacent"
   pddl_type: 2
   params: 
@@ -2008,8 +1293,3 @@
   params: 
     - "t48"
     - "t47"
-- name: "adjacent"
-  pddl_type: 2
-  params: 
-    - "t48"
-    - "t40"

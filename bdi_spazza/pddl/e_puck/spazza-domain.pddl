@@ -29,7 +29,7 @@
             (over all (walkable ?to))
         )
         :effect (and
-            (at end (not(at_rob ?r ?from)))
+            (at start (not(at_rob ?r ?from)))
             (at end (at_rob ?r ?to))
         )
     )
