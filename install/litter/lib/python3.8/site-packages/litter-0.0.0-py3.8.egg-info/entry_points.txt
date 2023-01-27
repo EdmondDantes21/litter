@@ -1,3 +1,0 @@
-[console_scripts]
-robot_driver = litter.robot_driver:main
-

@@ -1,6 +1,0 @@
-source;share/litter/hook/pythonpath.ps1
-source;share/litter/hook/pythonpath.dsv
-source;share/litter/hook/pythonpath.sh
-source;share/litter/hook/ament_prefix_path.ps1
-source;share/litter/hook/ament_prefix_path.dsv
-source;share/litter/hook/ament_prefix_path.sh

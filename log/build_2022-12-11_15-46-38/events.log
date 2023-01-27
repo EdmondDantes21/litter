@@ -1,8 +1,0 @@
-[0.000000] (-) TimerEvent: {}
-[0.000109] (-) JobUnselected: {'identifier': 'my_package'}
-[0.000137] (-) JobUnselected: {'identifier': 'my_package'}
-[0.000254] (collision_avoidance) JobQueued: {'identifier': 'collision_avoidance', 'dependencies': OrderedDict()}
-[0.000286] (collision_avoidance) JobStarted: {'identifier': 'collision_avoidance'}
-[0.098588] (-) TimerEvent: {}
-[0.166721] (collision_avoidance) JobEnded: {'identifier': 'collision_avoidance', 'rc': 0}
-[0.168028] (-) EventReactorShutdown: {}
