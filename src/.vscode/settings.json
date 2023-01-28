@@ -83,5 +83,6 @@
         "/home/redi/ws2/install/rosidl_generator_java/lib/python3.8/site-packages",
         "/home/redi/ws2/install/ament_build_type_gradle/lib/python3.8/site-packages",
         "/opt/ros/foxy/lib/python3.8/site-packages"
-    ]
+    ],
+    "cmake.configureOnOpen": false
 }
