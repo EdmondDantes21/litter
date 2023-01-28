@@ -1,0 +1,44 @@
+[1.108s] Invoking command in '/home/redi/litter/src/collision_avoidance': PYTHONPATH=/home/redi/litter/build/collision_avoidance/prefix_override:/home/redi/litter/install/collision_avoidance/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/collision_avoidance build --build-base /home/redi/litter/build/collision_avoidance/build install --record /home/redi/litter/build/collision_avoidance/install.log --install-scripts $base/lib/collision_avoidance --single-version-externally-managed
+[1.370s] running egg_info
+[1.370s] creating ../../build/collision_avoidance/collision_avoidance.egg-info
+[1.371s] writing ../../build/collision_avoidance/collision_avoidance.egg-info/PKG-INFO
+[1.371s] writing dependency_links to ../../build/collision_avoidance/collision_avoidance.egg-info/dependency_links.txt
+[1.371s] writing entry points to ../../build/collision_avoidance/collision_avoidance.egg-info/entry_points.txt
+[1.371s] writing requirements to ../../build/collision_avoidance/collision_avoidance.egg-info/requires.txt
+[1.372s] writing top-level names to ../../build/collision_avoidance/collision_avoidance.egg-info/top_level.txt
+[1.373s] writing manifest file '../../build/collision_avoidance/collision_avoidance.egg-info/SOURCES.txt'
+[1.404s] reading manifest file '../../build/collision_avoidance/collision_avoidance.egg-info/SOURCES.txt'
+[1.405s] writing manifest file '../../build/collision_avoidance/collision_avoidance.egg-info/SOURCES.txt'
+[1.405s] running build
+[1.405s] running build_py
+[1.406s] creating /home/redi/litter/build/collision_avoidance/build
+[1.406s] creating /home/redi/litter/build/collision_avoidance/build/lib
+[1.406s] creating /home/redi/litter/build/collision_avoidance/build/lib/collision_avoidance
+[1.406s] copying collision_avoidance/__init__.py -> /home/redi/litter/build/collision_avoidance/build/lib/collision_avoidance
+[1.406s] copying collision_avoidance/collision_avoidance_driver.py -> /home/redi/litter/build/collision_avoidance/build/lib/collision_avoidance
+[1.406s] running install
+[1.407s] running install_lib
+[1.408s] creating /home/redi/litter/install/collision_avoidance/lib/python3.8/site-packages/collision_avoidance
+[1.408s] copying /home/redi/litter/build/collision_avoidance/build/lib/collision_avoidance/__init__.py -> /home/redi/litter/install/collision_avoidance/lib/python3.8/site-packages/collision_avoidance
+[1.409s] copying /home/redi/litter/build/collision_avoidance/build/lib/collision_avoidance/collision_avoidance_driver.py -> /home/redi/litter/install/collision_avoidance/lib/python3.8/site-packages/collision_avoidance
+[1.409s] byte-compiling /home/redi/litter/install/collision_avoidance/lib/python3.8/site-packages/collision_avoidance/__init__.py to __init__.cpython-38.pyc
+[1.410s] byte-compiling /home/redi/litter/install/collision_avoidance/lib/python3.8/site-packages/collision_avoidance/collision_avoidance_driver.py to collision_avoidance_driver.cpython-38.pyc
+[1.411s] running install_data
+[1.411s] creating /home/redi/litter/install/collision_avoidance/share/ament_index
+[1.411s] creating /home/redi/litter/install/collision_avoidance/share/ament_index/resource_index
+[1.412s] creating /home/redi/litter/install/collision_avoidance/share/ament_index/resource_index/packages
+[1.412s] copying resource/collision_avoidance -> /home/redi/litter/install/collision_avoidance/share/ament_index/resource_index/packages
+[1.412s] creating /home/redi/litter/install/collision_avoidance/share/collision_avoidance/launch
+[1.412s] copying launch/robot_launch.py -> /home/redi/litter/install/collision_avoidance/share/collision_avoidance/launch
+[1.412s] creating /home/redi/litter/install/collision_avoidance/share/collision_avoidance/worlds
+[1.413s] copying worlds/my_world.wbt -> /home/redi/litter/install/collision_avoidance/share/collision_avoidance/worlds
+[1.413s] creating /home/redi/litter/install/collision_avoidance/share/collision_avoidance/resource
+[1.413s] copying resource/my_robot.urdf -> /home/redi/litter/install/collision_avoidance/share/collision_avoidance/resource
+[1.413s] copying resource/my_robot2.urdf -> /home/redi/litter/install/collision_avoidance/share/collision_avoidance/resource
+[1.413s] copying package.xml -> /home/redi/litter/install/collision_avoidance/share/collision_avoidance
+[1.413s] running install_egg_info
+[1.415s] Copying ../../build/collision_avoidance/collision_avoidance.egg-info to /home/redi/litter/install/collision_avoidance/lib/python3.8/site-packages/collision_avoidance-0.0.0-py3.8.egg-info
+[1.416s] running install_scripts
+[1.437s] Installing my_robot_driver script to /home/redi/litter/install/collision_avoidance/lib/collision_avoidance
+[1.437s] writing list of installed files to '/home/redi/litter/build/collision_avoidance/install.log'
+[1.466s] Invoked command in '/home/redi/litter/src/collision_avoidance' returned '0': PYTHONPATH=/home/redi/litter/build/collision_avoidance/prefix_override:/home/redi/litter/install/collision_avoidance/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/collision_avoidance build --build-base /home/redi/litter/build/collision_avoidance/build install --record /home/redi/litter/build/collision_avoidance/install.log --install-scripts $base/lib/collision_avoidance --single-version-externally-managed

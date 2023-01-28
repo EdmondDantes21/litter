@@ -1,0 +1,8 @@
+source;share/online_bdi_spazza/hook/cmake_prefix_path.ps1
+source;share/online_bdi_spazza/hook/cmake_prefix_path.dsv
+source;share/online_bdi_spazza/hook/cmake_prefix_path.sh
+source;share/online_bdi_spazza/local_setup.bash
+source;share/online_bdi_spazza/local_setup.dsv
+source;share/online_bdi_spazza/local_setup.ps1
+source;share/online_bdi_spazza/local_setup.sh
+source;share/online_bdi_spazza/local_setup.zsh

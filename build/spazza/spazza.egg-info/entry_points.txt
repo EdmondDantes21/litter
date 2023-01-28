@@ -1,0 +1,3 @@
+[console_scripts]
+my_robot_driver = spazza.e_puck_controller:main
+

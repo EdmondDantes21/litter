@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<robot name="supervisor">
+    <webots>
+        <plugin type="spazza.supervisor_controller.SupervisorController" webots_robot_name="supervisor"/>
+    </webots>
+</robot>

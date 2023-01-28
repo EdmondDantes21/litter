@@ -1,0 +1,3 @@
+source;share/online_bdi_spazza/environment/ament_prefix_path.sh
+source;share/online_bdi_spazza/environment/library_path.sh
+source;share/online_bdi_spazza/environment/path.sh

@@ -1,0 +1,219 @@
+[0.205s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'online_bdi_spazza']
+[0.205s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, ament_gradle_args=None, ament_gradle_task=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', gradle_args=None, gradle_task=None, ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f1e54cbf520>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=['online_bdi_spazza'], packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=8, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f1e54cbf520>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f1e54cbfa60>)
+[0.240s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.240s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.240s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.240s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.240s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.240s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.240s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/redi/litter'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ament_gradle']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ament_gradle'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'gradle', 'python']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'gradle'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ament_gradle']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ament_gradle'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'gradle', 'python']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'gradle'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/bdi_spazza) by extensions ['ignore', 'ignore_ament_install']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/bdi_spazza) by extension 'ignore'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/bdi_spazza) by extension 'ignore_ament_install'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/bdi_spazza) by extensions ['colcon_pkg']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/bdi_spazza) by extension 'colcon_pkg'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/bdi_spazza) by extensions ['colcon_meta']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/bdi_spazza) by extension 'colcon_meta'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/bdi_spazza) by extensions ['ament_gradle']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/bdi_spazza) by extension 'ament_gradle'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/bdi_spazza) by extensions ['ros']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/bdi_spazza) by extension 'ros'
+[0.258s] DEBUG:colcon.colcon_core.package_identification:Package 'src/bdi_spazza' with type 'ros.ament_cmake' and name 'bdi_spazza'
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(src/collision_avoidance) by extensions ['ignore', 'ignore_ament_install']
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(src/collision_avoidance) by extension 'ignore'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src/collision_avoidance) by extension 'ignore_ament_install'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src/collision_avoidance) by extensions ['colcon_pkg']
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src/collision_avoidance) by extension 'colcon_pkg'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src/collision_avoidance) by extensions ['colcon_meta']
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src/collision_avoidance) by extension 'colcon_meta'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src/collision_avoidance) by extensions ['ament_gradle']
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src/collision_avoidance) by extension 'ament_gradle'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src/collision_avoidance) by extensions ['ros']
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src/collision_avoidance) by extension 'ros'
+[0.260s] DEBUG:colcon.colcon_core.package_identification:Package 'src/collision_avoidance' with type 'ros.ament_python' and name 'collision_avoidance'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/online_bdi_spazza) by extensions ['ignore', 'ignore_ament_install']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/online_bdi_spazza) by extension 'ignore'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/online_bdi_spazza) by extension 'ignore_ament_install'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/online_bdi_spazza) by extensions ['colcon_pkg']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/online_bdi_spazza) by extension 'colcon_pkg'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/online_bdi_spazza) by extensions ['colcon_meta']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/online_bdi_spazza) by extension 'colcon_meta'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/online_bdi_spazza) by extensions ['ament_gradle']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/online_bdi_spazza) by extension 'ament_gradle'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/online_bdi_spazza) by extensions ['ros']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/online_bdi_spazza) by extension 'ros'
+[0.261s] DEBUG:colcon.colcon_core.package_identification:Package 'src/online_bdi_spazza' with type 'ros.ament_cmake' and name 'online_bdi_spazza'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/spazza) by extensions ['ignore', 'ignore_ament_install']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/spazza) by extension 'ignore'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/spazza) by extension 'ignore_ament_install'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/spazza) by extensions ['colcon_pkg']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/spazza) by extension 'colcon_pkg'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/spazza) by extensions ['colcon_meta']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/spazza) by extension 'colcon_meta'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/spazza) by extensions ['ament_gradle']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/spazza) by extension 'ament_gradle'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/spazza) by extensions ['ros']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(src/spazza) by extension 'ros'
+[0.262s] DEBUG:colcon.colcon_core.package_identification:Package 'src/spazza' with type 'ros.ament_python' and name 'spazza'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/spazza_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/spazza_interfaces) by extension 'ignore'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/spazza_interfaces) by extension 'ignore_ament_install'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/spazza_interfaces) by extensions ['colcon_pkg']
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/spazza_interfaces) by extension 'colcon_pkg'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/spazza_interfaces) by extensions ['colcon_meta']
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/spazza_interfaces) by extension 'colcon_meta'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/spazza_interfaces) by extensions ['ament_gradle']
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/spazza_interfaces) by extension 'ament_gradle'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/spazza_interfaces) by extensions ['ros']
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/spazza_interfaces) by extension 'ros'
+[0.263s] DEBUG:colcon.colcon_core.package_identification:Package 'src/spazza_interfaces' with type 'ros.ament_cmake' and name 'spazza_interfaces'
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_pkg) by extension 'ignore'
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_pkg) by extension 'ignore_ament_install'
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_pkg) by extensions ['colcon_pkg']
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_pkg) by extension 'colcon_pkg'
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_pkg) by extensions ['colcon_meta']
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_pkg) by extension 'colcon_meta'
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_pkg) by extensions ['ament_gradle']
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_pkg) by extension 'ament_gradle'
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_pkg) by extensions ['ros']
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_pkg) by extension 'ros'
+[0.264s] DEBUG:colcon.colcon_core.package_identification:Package 'src/test_pkg' with type 'ros.ament_python' and name 'test_pkg'
+[0.264s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.264s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.264s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.264s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.264s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.285s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'bdi_spazza' in 'src/bdi_spazza'
+[0.285s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'collision_avoidance' in 'src/collision_avoidance'
+[0.285s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'spazza_interfaces' in 'src/spazza_interfaces'
+[0.285s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'test_pkg' in 'src/test_pkg'
+[0.285s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'spazza' in 'src/spazza'
+[0.286s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.286s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.291s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 5 installed packages in /home/redi/examples/install
+[0.293s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 60 installed packages in /home/redi/ws2/install
+[0.295s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 289 installed packages in /opt/ros/foxy
+[0.298s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.377s] Level 5:colcon.colcon_core.verb:set package 'online_bdi_spazza' build argument 'ament_gradle_args' from command line to 'None'
+[0.377s] Level 5:colcon.colcon_core.verb:set package 'online_bdi_spazza' build argument 'ament_gradle_task' from command line to 'None'
+[0.378s] Level 5:colcon.colcon_core.verb:set package 'online_bdi_spazza' build argument 'cmake_args' from command line to 'None'
+[0.378s] Level 5:colcon.colcon_core.verb:set package 'online_bdi_spazza' build argument 'cmake_target' from command line to 'None'
+[0.378s] Level 5:colcon.colcon_core.verb:set package 'online_bdi_spazza' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.378s] Level 5:colcon.colcon_core.verb:set package 'online_bdi_spazza' build argument 'cmake_clean_cache' from command line to 'False'
+[0.378s] Level 5:colcon.colcon_core.verb:set package 'online_bdi_spazza' build argument 'cmake_clean_first' from command line to 'False'
+[0.378s] Level 5:colcon.colcon_core.verb:set package 'online_bdi_spazza' build argument 'cmake_force_configure' from command line to 'False'
+[0.378s] Level 5:colcon.colcon_core.verb:set package 'online_bdi_spazza' build argument 'gradle_args' from command line to 'None'
+[0.378s] Level 5:colcon.colcon_core.verb:set package 'online_bdi_spazza' build argument 'gradle_task' from command line to 'None'
+[0.378s] Level 5:colcon.colcon_core.verb:set package 'online_bdi_spazza' build argument 'ament_cmake_args' from command line to 'None'
+[0.378s] Level 5:colcon.colcon_core.verb:set package 'online_bdi_spazza' build argument 'catkin_cmake_args' from command line to 'None'
+[0.378s] Level 5:colcon.colcon_core.verb:set package 'online_bdi_spazza' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.378s] DEBUG:colcon.colcon_core.verb:Building package 'online_bdi_spazza' with the following arguments: {'ament_cmake_args': None, 'ament_gradle_args': None, 'ament_gradle_task': None, 'build_base': '/home/redi/litter/build/online_bdi_spazza', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'gradle_args': None, 'gradle_task': None, 'install_base': '/home/redi/litter/install/online_bdi_spazza', 'merge_install': False, 'path': '/home/redi/litter/src/online_bdi_spazza', 'symlink_install': False, 'test_result_base': None}
+[0.378s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.382s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.382s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/redi/litter/src/online_bdi_spazza' with build type 'ament_cmake'
+[0.383s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/redi/litter/src/online_bdi_spazza'
+[0.387s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.388s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.388s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.405s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/redi/litter/build/online_bdi_spazza': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/redi/examples/install/test_pkg:/home/redi/examples/install/spazza:/home/redi/examples/install/collision_avoidance:/home/redi/ws2/install/webots_ros2_simulations:/home/redi/ws2/install/javaff:/home/redi/ws2/install/litter_world:/home/redi/ws2/install/sensor_msgs_py:/home/redi/ws2/install/ament_build_type_gradle:/opt/ros/foxy /usr/bin/cmake /home/redi/litter/src/online_bdi_spazza -DCMAKE_INSTALL_PREFIX=/home/redi/litter/install/online_bdi_spazza
+[1.758s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/redi/litter/build/online_bdi_spazza' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/redi/examples/install/test_pkg:/home/redi/examples/install/spazza:/home/redi/examples/install/collision_avoidance:/home/redi/ws2/install/webots_ros2_simulations:/home/redi/ws2/install/javaff:/home/redi/ws2/install/litter_world:/home/redi/ws2/install/sensor_msgs_py:/home/redi/ws2/install/ament_build_type_gradle:/opt/ros/foxy /usr/bin/cmake /home/redi/litter/src/online_bdi_spazza -DCMAKE_INSTALL_PREFIX=/home/redi/litter/install/online_bdi_spazza
+[1.761s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/redi/litter/build/online_bdi_spazza': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/redi/examples/install/test_pkg:/home/redi/examples/install/spazza:/home/redi/examples/install/collision_avoidance:/home/redi/ws2/install/webots_ros2_simulations:/home/redi/ws2/install/javaff:/home/redi/ws2/install/litter_world:/home/redi/ws2/install/sensor_msgs_py:/home/redi/ws2/install/ament_build_type_gradle:/opt/ros/foxy /usr/bin/cmake --build /home/redi/litter/build/online_bdi_spazza -- -j8 -l8
+[1.853s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/redi/litter/build/online_bdi_spazza' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/redi/examples/install/test_pkg:/home/redi/examples/install/spazza:/home/redi/examples/install/collision_avoidance:/home/redi/ws2/install/webots_ros2_simulations:/home/redi/ws2/install/javaff:/home/redi/ws2/install/litter_world:/home/redi/ws2/install/sensor_msgs_py:/home/redi/ws2/install/ament_build_type_gradle:/opt/ros/foxy /usr/bin/cmake --build /home/redi/litter/build/online_bdi_spazza -- -j8 -l8
+[1.937s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/redi/litter/build/online_bdi_spazza': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/redi/examples/install/test_pkg:/home/redi/examples/install/spazza:/home/redi/examples/install/collision_avoidance:/home/redi/ws2/install/webots_ros2_simulations:/home/redi/ws2/install/javaff:/home/redi/ws2/install/litter_world:/home/redi/ws2/install/sensor_msgs_py:/home/redi/ws2/install/ament_build_type_gradle:/opt/ros/foxy /usr/bin/cmake --install /home/redi/litter/build/online_bdi_spazza
+[1.962s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(online_bdi_spazza)
+[1.963s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/redi/litter/build/online_bdi_spazza' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/redi/examples/install/test_pkg:/home/redi/examples/install/spazza:/home/redi/examples/install/collision_avoidance:/home/redi/ws2/install/webots_ros2_simulations:/home/redi/ws2/install/javaff:/home/redi/ws2/install/litter_world:/home/redi/ws2/install/sensor_msgs_py:/home/redi/ws2/install/ament_build_type_gradle:/opt/ros/foxy /usr/bin/cmake --install /home/redi/litter/build/online_bdi_spazza
+[1.972s] Level 1:colcon.colcon_core.environment:checking '/home/redi/litter/install/online_bdi_spazza' for CMake module files
+[1.972s] Level 1:colcon.colcon_core.environment:checking '/home/redi/litter/install/online_bdi_spazza' for CMake config files
+[1.972s] Level 1:colcon.colcon_core.shell:create_environment_hook('online_bdi_spazza', 'cmake_prefix_path')
+[1.974s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/hook/cmake_prefix_path.ps1'
+[1.975s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/hook/cmake_prefix_path.dsv'
+[1.975s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/hook/cmake_prefix_path.sh'
+[1.977s] Level 1:colcon.colcon_core.environment:checking '/home/redi/litter/install/online_bdi_spazza/bin'
+[1.977s] Level 1:colcon.colcon_core.environment:checking '/home/redi/litter/install/online_bdi_spazza/lib/pkgconfig/online_bdi_spazza.pc'
+[1.977s] Level 1:colcon.colcon_core.environment:checking '/home/redi/litter/install/online_bdi_spazza/lib/python3.8/site-packages'
+[1.977s] Level 1:colcon.colcon_core.environment:checking '/home/redi/litter/install/online_bdi_spazza/bin'
+[1.979s] INFO:colcon.colcon_core.shell:Creating package script '/home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/package.ps1'
+[1.979s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/package.dsv'
+[1.980s] INFO:colcon.colcon_core.shell:Creating package script '/home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/package.sh'
+[1.981s] INFO:colcon.colcon_core.shell:Creating package script '/home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/package.bash'
+[1.981s] INFO:colcon.colcon_core.shell:Creating package script '/home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/package.zsh'
+[1.982s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/redi/litter/install/online_bdi_spazza/share/colcon-core/packages/online_bdi_spazza)
+[2.047s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(online_bdi_spazza)
+[2.049s] Level 1:colcon.colcon_core.environment:checking '/home/redi/litter/install/online_bdi_spazza' for CMake module files
+[2.050s] Level 1:colcon.colcon_core.environment:checking '/home/redi/litter/install/online_bdi_spazza' for CMake config files
+[2.050s] Level 1:colcon.colcon_core.shell:create_environment_hook('online_bdi_spazza', 'cmake_prefix_path')
+[2.052s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/hook/cmake_prefix_path.ps1'
+[2.052s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/hook/cmake_prefix_path.dsv'
+[2.053s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/hook/cmake_prefix_path.sh'
+[2.053s] Level 1:colcon.colcon_core.environment:checking '/home/redi/litter/install/online_bdi_spazza/bin'
+[2.053s] Level 1:colcon.colcon_core.environment:checking '/home/redi/litter/install/online_bdi_spazza/lib/pkgconfig/online_bdi_spazza.pc'
+[2.053s] Level 1:colcon.colcon_core.environment:checking '/home/redi/litter/install/online_bdi_spazza/lib/python3.8/site-packages'
+[2.054s] Level 1:colcon.colcon_core.environment:checking '/home/redi/litter/install/online_bdi_spazza/bin'
+[2.055s] INFO:colcon.colcon_core.shell:Creating package script '/home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/package.ps1'
+[2.055s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/package.dsv'
+[2.056s] INFO:colcon.colcon_core.shell:Creating package script '/home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/package.sh'
+[2.056s] INFO:colcon.colcon_core.shell:Creating package script '/home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/package.bash'
+[2.057s] INFO:colcon.colcon_core.shell:Creating package script '/home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/package.zsh'
+[2.057s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/redi/litter/install/online_bdi_spazza/share/colcon-core/packages/online_bdi_spazza)
+[2.057s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.058s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.058s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[2.058s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.073s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.074s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.074s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[2.091s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.093s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/redi/litter/install/local_setup.ps1'
+[2.094s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/redi/litter/install/_local_setup_util_ps1.py'
+[2.096s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/redi/litter/install/setup.ps1'
+[2.101s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/redi/litter/install/local_setup.sh'
+[2.101s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/redi/litter/install/_local_setup_util_sh.py'
+[2.102s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/redi/litter/install/setup.sh'
+[2.107s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/redi/litter/install/local_setup.bash'
+[2.107s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/redi/litter/install/setup.bash'
+[2.112s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/redi/litter/install/local_setup.zsh'
+[2.112s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/redi/litter/install/setup.zsh'

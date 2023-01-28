@@ -1,0 +1,4 @@
+source;share/bdi_spazza/local_setup.bash
+source;share/bdi_spazza/local_setup.dsv
+source;share/bdi_spazza/local_setup.sh
+source;share/bdi_spazza/local_setup.zsh

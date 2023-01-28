@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<robot name="my_robot">
+    <webots>
+        <plugin type="collision_avoidance.collision_avoidance_driver.MyRobotDriver" webots_robot_name="my_robot"/>
+    </webots>
+</robot>

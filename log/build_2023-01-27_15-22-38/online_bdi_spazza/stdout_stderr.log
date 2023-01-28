@@ -1,0 +1,45 @@
+[100%] Built target putdown
+[100%] Built target move
+[100%] Built target pickup
+-- Install configuration: ""
+-- Up-to-date: /home/redi/litter/install/online_bdi_spazza/include/
+-- Up-to-date: /home/redi/litter/install/online_bdi_spazza/include//online_bdi_spazza
+-- Up-to-date: /home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/environment/library_path.sh
+-- Up-to-date: /home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/environment/library_path.dsv
+-- Up-to-date: /home/redi/litter/install/online_bdi_spazza/lib/online_bdi_spazza/move
+-- Up-to-date: /home/redi/litter/install/online_bdi_spazza/lib/online_bdi_spazza/pickup
+-- Up-to-date: /home/redi/litter/install/online_bdi_spazza/lib/online_bdi_spazza/putdown
+-- Up-to-date: /home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/launch
+-- Up-to-date: /home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/launch/init_e_puck
+-- Up-to-date: /home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/launch/init_e_puck/tmp.txt
+-- Up-to-date: /home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/launch/init_e_puck/init_rrules.yaml
+-- Up-to-date: /home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/launch/init_e_puck/init_e_puck_dset.yaml
+-- Up-to-date: /home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/launch/init_e_puck/init_e_puck_bset.yaml
+-- Up-to-date: /home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/launch/init_e_puck/init_generator.cpp
+-- Up-to-date: /home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/launch/init_e_puck/a.out
+-- Up-to-date: /home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/launch/init_e_puck/init_bset.yaml
+-- Up-to-date: /home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/launch/init_e_puck/init_dset.yaml
+-- Up-to-date: /home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/launch/init_e_puck/init_e_puck_rrules.yaml
+-- Installing: /home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/launch/online_launcher.launch.py
+-- Up-to-date: /home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/pddl
+-- Up-to-date: /home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/pddl/e_puck
+-- Up-to-date: /home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/pddl/e_puck/spazza-domain.pddl
+-- Up-to-date: /home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/pddl/e_puck/generate_pddl_properties.cpp
+-- Up-to-date: /home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/pddl/e_puck/spazza_problem.pddl
+-- Up-to-date: /home/redi/litter/install/online_bdi_spazza/share/ament_index/resource_index/package_run_dependencies/online_bdi_spazza
+-- Up-to-date: /home/redi/litter/install/online_bdi_spazza/share/ament_index/resource_index/parent_prefix_path/online_bdi_spazza
+-- Up-to-date: /home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/environment/ament_prefix_path.sh
+-- Up-to-date: /home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/environment/path.sh
+-- Up-to-date: /home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/environment/path.dsv
+-- Up-to-date: /home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/local_setup.bash
+-- Up-to-date: /home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/local_setup.sh
+-- Up-to-date: /home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/local_setup.zsh
+-- Up-to-date: /home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/local_setup.dsv
+-- Installing: /home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/package.dsv
+-- Up-to-date: /home/redi/litter/install/online_bdi_spazza/share/ament_index/resource_index/packages/online_bdi_spazza
+-- Up-to-date: /home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Up-to-date: /home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/cmake/ament_cmake_export_libraries-extras.cmake
+-- Up-to-date: /home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/cmake/online_bdi_spazzaConfig.cmake
+-- Up-to-date: /home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/cmake/online_bdi_spazzaConfig-version.cmake
+-- Up-to-date: /home/redi/litter/install/online_bdi_spazza/share/online_bdi_spazza/package.xml

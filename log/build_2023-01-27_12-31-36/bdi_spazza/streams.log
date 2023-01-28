@@ -1,0 +1,104 @@
+[0.066s] Invoking command in '/home/redi/litter/build/bdi_spazza': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/redi/examples/install/test_pkg:/home/redi/examples/install/spazza:/home/redi/examples/install/collision_avoidance:/home/redi/ws2/install/webots_ros2_simulations:/home/redi/ws2/install/javaff:/home/redi/ws2/install/litter_world:/home/redi/ws2/install/sensor_msgs_py:/home/redi/ws2/install/ament_build_type_gradle:/opt/ros/foxy /usr/bin/cmake /home/redi/litter/src/bdi_spazza -DCMAKE_INSTALL_PREFIX=/home/redi/litter/install/bdi_spazza
+[0.371s] -- The C compiler identification is GNU 9.4.0
+[0.371s] -- The CXX compiler identification is GNU 9.4.0
+[0.371s] -- Check for working C compiler: /usr/bin/cc
+[0.371s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.371s] -- Detecting C compiler ABI info
+[0.484s] -- Detecting C compiler ABI info - done
+[0.496s] -- Detecting C compile features
+[0.496s] -- Detecting C compile features - done
+[0.500s] -- Check for working CXX compiler: /usr/bin/c++
+[0.628s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.629s] -- Detecting CXX compiler ABI info
+[0.768s] -- Detecting CXX compiler ABI info - done
+[0.790s] -- Detecting CXX compile features
+[0.791s] -- Detecting CXX compile features - done
+[0.799s] -- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.862s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.862s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.228s] -- Found rclcpp: 2.4.2 (/opt/ros/foxy/share/rclcpp/cmake)
+[1.335s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.358s] -- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.552s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[1.602s] -- Found FastRTPS: /opt/ros/foxy/include  
+[1.728s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.836s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.840s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.841s] -- Looking for pthread.h
+[1.965s] -- Looking for pthread.h - found
+[1.965s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.094s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[2.094s] -- Looking for pthread_create in pthreads
+[2.205s] -- Looking for pthread_create in pthreads - not found
+[2.205s] -- Looking for pthread_create in pthread
+[2.331s] -- Looking for pthread_create in pthread - found
+[2.333s] -- Found Threads: TRUE  
+[2.545s] -- Found rclcpp_action: 2.4.2 (/opt/ros/foxy/share/rclcpp_action/cmake)
+[2.638s] -- Found plansys2_msgs: 2.0.8 (/home/redi/ws2/install/plansys2_msgs/share/plansys2_msgs/cmake)
+[2.845s] -- Found plansys2_executor: 2.0.8 (/home/redi/ws2/install/plansys2_executor/share/plansys2_executor/cmake)
+[6.493s] -- Found ros2_bdi_utils: 0.0.0 (/home/redi/ws2/install/ros2_bdi_utils/share/ros2_bdi_utils/cmake)
+[6.497s] -- Found ros2_bdi_interfaces: 0.0.0 (/home/redi/ws2/install/ros2_bdi_interfaces/share/ros2_bdi_interfaces/cmake)
+[6.654s] -- Found ros2_bdi_skills: 0.0.0 (/home/redi/ws2/install/ros2_bdi_skills/share/ros2_bdi_skills/cmake)
+[6.657s] -- Found ros2_bdi_core: 0.0.0 (/home/redi/ws2/install/ros2_bdi_core/share/ros2_bdi_core/cmake)
+[6.661s] -- Found javaff_interfaces: 0.0.0 (/home/redi/ws2/install/javaff_interfaces/share/javaff_interfaces/cmake)
+[7.195s] -- Found geometry_msgs: 2.2.4 (/home/redi/ws2/install/geometry_msgs/share/geometry_msgs/cmake)
+[7.292s] -- Found sensor_msgs: 2.2.4 (/home/redi/ws2/install/sensor_msgs/share/sensor_msgs/cmake)
+[9.003s] -- Configuring done
+[9.183s] -- Generating done
+[9.187s] -- Build files have been written to: /home/redi/litter/build/bdi_spazza
+[9.204s] Invoked command in '/home/redi/litter/build/bdi_spazza' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/redi/examples/install/test_pkg:/home/redi/examples/install/spazza:/home/redi/examples/install/collision_avoidance:/home/redi/ws2/install/webots_ros2_simulations:/home/redi/ws2/install/javaff:/home/redi/ws2/install/litter_world:/home/redi/ws2/install/sensor_msgs_py:/home/redi/ws2/install/ament_build_type_gradle:/opt/ros/foxy /usr/bin/cmake /home/redi/litter/src/bdi_spazza -DCMAKE_INSTALL_PREFIX=/home/redi/litter/install/bdi_spazza
+[9.210s] Invoking command in '/home/redi/litter/build/bdi_spazza': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/redi/examples/install/test_pkg:/home/redi/examples/install/spazza:/home/redi/examples/install/collision_avoidance:/home/redi/ws2/install/webots_ros2_simulations:/home/redi/ws2/install/javaff:/home/redi/ws2/install/litter_world:/home/redi/ws2/install/sensor_msgs_py:/home/redi/ws2/install/ament_build_type_gradle:/opt/ros/foxy /usr/bin/cmake --build /home/redi/litter/build/bdi_spazza -- -j8 -l8
+[9.375s] [35m[1mScanning dependencies of target putdown[0m
+[9.375s] [35m[1mScanning dependencies of target move[0m
+[9.376s] [35m[1mScanning dependencies of target pickup[0m
+[9.571s] [ 16%] [32mBuilding CXX object CMakeFiles/pickup.dir/src/actions/e_puck/pickup.cpp.o[0m
+[9.603s] [ 50%] [32mBuilding CXX object CMakeFiles/move.dir/src/actions/e_puck/move.cpp.o[0m
+[9.604s] [ 50%] [32mBuilding CXX object CMakeFiles/putdown.dir/src/actions/e_puck/putdown.cpp.o[0m
+[14.568s] [ 66%] [32m[1mLinking CXX executable putdown[0m
+[14.593s] [ 83%] [32m[1mLinking CXX executable pickup[0m
+[15.979s] [ 83%] Built target putdown
+[16.038s] [ 83%] Built target pickup
+[17.679s] [100%] [32m[1mLinking CXX executable move[0m
+[18.665s] [100%] Built target move
+[18.690s] Invoked command in '/home/redi/litter/build/bdi_spazza' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/redi/examples/install/test_pkg:/home/redi/examples/install/spazza:/home/redi/examples/install/collision_avoidance:/home/redi/ws2/install/webots_ros2_simulations:/home/redi/ws2/install/javaff:/home/redi/ws2/install/litter_world:/home/redi/ws2/install/sensor_msgs_py:/home/redi/ws2/install/ament_build_type_gradle:/opt/ros/foxy /usr/bin/cmake --build /home/redi/litter/build/bdi_spazza -- -j8 -l8
+[18.783s] Invoking command in '/home/redi/litter/build/bdi_spazza': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/redi/examples/install/test_pkg:/home/redi/examples/install/spazza:/home/redi/examples/install/collision_avoidance:/home/redi/ws2/install/webots_ros2_simulations:/home/redi/ws2/install/javaff:/home/redi/ws2/install/litter_world:/home/redi/ws2/install/sensor_msgs_py:/home/redi/ws2/install/ament_build_type_gradle:/opt/ros/foxy /usr/bin/cmake --install /home/redi/litter/build/bdi_spazza
+[18.800s] -- Install configuration: ""
+[18.800s] -- Installing: /home/redi/litter/install/bdi_spazza/lib/bdi_spazza/move
+[18.803s] -- Set runtime path of "/home/redi/litter/install/bdi_spazza/lib/bdi_spazza/move" to ""
+[18.803s] -- Installing: /home/redi/litter/install/bdi_spazza/lib/bdi_spazza/pickup
+[18.804s] -- Set runtime path of "/home/redi/litter/install/bdi_spazza/lib/bdi_spazza/pickup" to ""
+[18.805s] -- Installing: /home/redi/litter/install/bdi_spazza/lib/bdi_spazza/putdown
+[18.806s] -- Set runtime path of "/home/redi/litter/install/bdi_spazza/lib/bdi_spazza/putdown" to ""
+[18.806s] -- Installing: /home/redi/litter/install/bdi_spazza/share/bdi_spazza/launch
+[18.806s] -- Installing: /home/redi/litter/install/bdi_spazza/share/bdi_spazza/launch/init_e_puck
+[18.807s] -- Installing: /home/redi/litter/install/bdi_spazza/share/bdi_spazza/launch/init_e_puck/tmp.txt
+[18.807s] -- Installing: /home/redi/litter/install/bdi_spazza/share/bdi_spazza/launch/init_e_puck/init_e_puck_dset.yaml
+[18.807s] -- Installing: /home/redi/litter/install/bdi_spazza/share/bdi_spazza/launch/init_e_puck/init_e_puck_bset.yaml
+[18.807s] -- Installing: /home/redi/litter/install/bdi_spazza/share/bdi_spazza/launch/init_e_puck/init_generator.cpp
+[18.807s] -- Installing: /home/redi/litter/install/bdi_spazza/share/bdi_spazza/launch/init_e_puck/a.out
+[18.807s] -- Installing: /home/redi/litter/install/bdi_spazza/share/bdi_spazza/launch/init_e_puck/init_bset.yaml
+[18.808s] -- Installing: /home/redi/litter/install/bdi_spazza/share/bdi_spazza/launch/init_e_puck/init_dset.yaml
+[18.808s] -- Installing: /home/redi/litter/install/bdi_spazza/share/bdi_spazza/launch/init_e_puck/init_e_puck_rrules.yaml
+[18.808s] -- Installing: /home/redi/litter/install/bdi_spazza/share/bdi_spazza/launch/online_launcher.launch.py
+[18.808s] -- Installing: /home/redi/litter/install/bdi_spazza/share/bdi_spazza/launch/offline_launcher.launch.py
+[18.808s] -- Installing: /home/redi/litter/install/bdi_spazza/share/bdi_spazza/pddl
+[18.808s] -- Installing: /home/redi/litter/install/bdi_spazza/share/bdi_spazza/pddl/e_puck
+[18.808s] -- Installing: /home/redi/litter/install/bdi_spazza/share/bdi_spazza/pddl/e_puck/spazza-domain.pddl
+[18.808s] -- Installing: /home/redi/litter/install/bdi_spazza/share/bdi_spazza/pddl/e_puck/generate_pddl_properties.cpp
+[18.809s] -- Installing: /home/redi/litter/install/bdi_spazza/share/bdi_spazza/pddl/e_puck/spazza_problem.pddl
+[18.809s] -- Installing: /home/redi/litter/install/bdi_spazza/share/ament_index/resource_index/package_run_dependencies/bdi_spazza
+[18.809s] -- Installing: /home/redi/litter/install/bdi_spazza/share/ament_index/resource_index/parent_prefix_path/bdi_spazza
+[18.809s] -- Installing: /home/redi/litter/install/bdi_spazza/share/bdi_spazza/environment/ament_prefix_path.sh
+[18.809s] -- Installing: /home/redi/litter/install/bdi_spazza/share/bdi_spazza/environment/ament_prefix_path.dsv
+[18.809s] -- Installing: /home/redi/litter/install/bdi_spazza/share/bdi_spazza/environment/path.sh
+[18.809s] -- Installing: /home/redi/litter/install/bdi_spazza/share/bdi_spazza/environment/path.dsv
+[18.809s] -- Installing: /home/redi/litter/install/bdi_spazza/share/bdi_spazza/local_setup.bash
+[18.810s] -- Installing: /home/redi/litter/install/bdi_spazza/share/bdi_spazza/local_setup.sh
+[18.810s] -- Installing: /home/redi/litter/install/bdi_spazza/share/bdi_spazza/local_setup.zsh
+[18.810s] -- Installing: /home/redi/litter/install/bdi_spazza/share/bdi_spazza/local_setup.dsv
+[18.810s] -- Installing: /home/redi/litter/install/bdi_spazza/share/bdi_spazza/package.dsv
+[18.810s] -- Installing: /home/redi/litter/install/bdi_spazza/share/ament_index/resource_index/packages/bdi_spazza
+[18.810s] -- Installing: /home/redi/litter/install/bdi_spazza/share/bdi_spazza/cmake/bdi_spazzaConfig.cmake
+[18.810s] -- Installing: /home/redi/litter/install/bdi_spazza/share/bdi_spazza/cmake/bdi_spazzaConfig-version.cmake
+[18.810s] -- Installing: /home/redi/litter/install/bdi_spazza/share/bdi_spazza/package.xml
+[18.817s] Invoked command in '/home/redi/litter/build/bdi_spazza' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/redi/examples/install/test_pkg:/home/redi/examples/install/spazza:/home/redi/examples/install/collision_avoidance:/home/redi/ws2/install/webots_ros2_simulations:/home/redi/ws2/install/javaff:/home/redi/ws2/install/litter_world:/home/redi/ws2/install/sensor_msgs_py:/home/redi/ws2/install/ament_build_type_gradle:/opt/ros/foxy /usr/bin/cmake --install /home/redi/litter/build/bdi_spazza

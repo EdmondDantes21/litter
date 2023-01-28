@@ -1,0 +1,48 @@
+running egg_info
+creating ../../build/spazza/spazza.egg-info
+writing ../../build/spazza/spazza.egg-info/PKG-INFO
+writing dependency_links to ../../build/spazza/spazza.egg-info/dependency_links.txt
+writing entry points to ../../build/spazza/spazza.egg-info/entry_points.txt
+writing requirements to ../../build/spazza/spazza.egg-info/requires.txt
+writing top-level names to ../../build/spazza/spazza.egg-info/top_level.txt
+writing manifest file '../../build/spazza/spazza.egg-info/SOURCES.txt'
+reading manifest file '../../build/spazza/spazza.egg-info/SOURCES.txt'
+writing manifest file '../../build/spazza/spazza.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/redi/litter/build/spazza/build
+creating /home/redi/litter/build/spazza/build/lib
+creating /home/redi/litter/build/spazza/build/lib/spazza
+copying spazza/__init__.py -> /home/redi/litter/build/spazza/build/lib/spazza
+copying spazza/supervisor_controller.py -> /home/redi/litter/build/spazza/build/lib/spazza
+copying spazza/pm.py -> /home/redi/litter/build/spazza/build/lib/spazza
+copying spazza/e_puck_controller.py -> /home/redi/litter/build/spazza/build/lib/spazza
+running install
+running install_lib
+creating /home/redi/litter/install/spazza/lib/python3.8/site-packages/spazza
+copying /home/redi/litter/build/spazza/build/lib/spazza/__init__.py -> /home/redi/litter/install/spazza/lib/python3.8/site-packages/spazza
+copying /home/redi/litter/build/spazza/build/lib/spazza/supervisor_controller.py -> /home/redi/litter/install/spazza/lib/python3.8/site-packages/spazza
+copying /home/redi/litter/build/spazza/build/lib/spazza/pm.py -> /home/redi/litter/install/spazza/lib/python3.8/site-packages/spazza
+copying /home/redi/litter/build/spazza/build/lib/spazza/e_puck_controller.py -> /home/redi/litter/install/spazza/lib/python3.8/site-packages/spazza
+byte-compiling /home/redi/litter/install/spazza/lib/python3.8/site-packages/spazza/__init__.py to __init__.cpython-38.pyc
+byte-compiling /home/redi/litter/install/spazza/lib/python3.8/site-packages/spazza/supervisor_controller.py to supervisor_controller.cpython-38.pyc
+byte-compiling /home/redi/litter/install/spazza/lib/python3.8/site-packages/spazza/pm.py to pm.cpython-38.pyc
+byte-compiling /home/redi/litter/install/spazza/lib/python3.8/site-packages/spazza/e_puck_controller.py to e_puck_controller.cpython-38.pyc
+running install_data
+creating /home/redi/litter/install/spazza/share/ament_index
+creating /home/redi/litter/install/spazza/share/ament_index/resource_index
+creating /home/redi/litter/install/spazza/share/ament_index/resource_index/packages
+copying resource/spazza -> /home/redi/litter/install/spazza/share/ament_index/resource_index/packages
+creating /home/redi/litter/install/spazza/share/spazza/launch
+copying launch/launcher.launch.py -> /home/redi/litter/install/spazza/share/spazza/launch
+creating /home/redi/litter/install/spazza/share/spazza/worlds
+copying worlds/litter.wbt -> /home/redi/litter/install/spazza/share/spazza/worlds
+creating /home/redi/litter/install/spazza/share/spazza/resource
+copying resource/e_puck.urdf -> /home/redi/litter/install/spazza/share/spazza/resource
+copying resource/supervisor.urdf -> /home/redi/litter/install/spazza/share/spazza/resource
+copying package.xml -> /home/redi/litter/install/spazza/share/spazza
+running install_egg_info
+Copying ../../build/spazza/spazza.egg-info to /home/redi/litter/install/spazza/lib/python3.8/site-packages/spazza-0.0.0-py3.8.egg-info
+running install_scripts
+Installing my_robot_driver script to /home/redi/litter/install/spazza/lib/spazza
+writing list of installed files to '/home/redi/litter/build/spazza/install.log'

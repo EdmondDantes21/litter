@@ -1,0 +1,143 @@
+[0.000000] (-) TimerEvent: {}
+[0.000416] (-) JobUnselected: {'identifier': 'bdi_spazza'}
+[0.000657] (-) JobUnselected: {'identifier': 'collision_avoidance'}
+[0.000681] (-) JobUnselected: {'identifier': 'spazza'}
+[0.000698] (-) JobUnselected: {'identifier': 'spazza_interfaces'}
+[0.000714] (-) JobUnselected: {'identifier': 'test_pkg'}
+[0.001128] (online_bdi_spazza) JobQueued: {'identifier': 'online_bdi_spazza', 'dependencies': OrderedDict([('spazza_interfaces', '/home/redi/litter/install/spazza_interfaces')])}
+[0.001481] (online_bdi_spazza) JobStarted: {'identifier': 'online_bdi_spazza'}
+[0.026444] (online_bdi_spazza) JobProgress: {'identifier': 'online_bdi_spazza', 'progress': 'cmake'}
+[0.028100] (online_bdi_spazza) JobProgress: {'identifier': 'online_bdi_spazza', 'progress': 'build'}
+[0.028155] (online_bdi_spazza) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/redi/litter/build/online_bdi_spazza', '--', '-j8', '-l8'], 'cwd': '/home/redi/litter/build/online_bdi_spazza', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'redi'), ('LC_TIME', 'en_GB.UTF-8'), ('SSH_AGENT_PID', '1728'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/redi/litter/install/spazza_interfaces/lib:/home/redi/examples/install/spazza_interfaces/lib/jni:/home/redi/examples/install/spazza_interfaces/lib:/home/redi/ws2/install/webots_ros2_simulations_interfaces/lib/jni:/home/redi/ws2/install/webots_ros2_simulations_interfaces/lib:/home/redi/ws2/install/visualization_msgs/lib/jni:/home/redi/ws2/install/visualization_msgs/lib:/home/redi/ws2/install/test_msgs/lib/jni:/home/redi/ws2/install/test_msgs/lib:/home/redi/ws2/install/ros2_bdi_on_litter_world/lib:/home/redi/ws2/install/ros2_bdi_skills/lib:/home/redi/ws2/install/ros2_bdi_core/lib:/home/redi/ws2/install/ros2_bdi_utils/lib:/home/redi/ws2/install/plansys2_javaff_plan_solver/lib:/home/redi/ws2/install/javaff_interfaces/lib/jni:/home/redi/ws2/install/javaff_interfaces/lib:/home/redi/ws2/install/ros2_bdi_interfaces/lib/jni:/home/redi/ws2/install/ros2_bdi_interfaces/lib:/home/redi/ws2/install/plansys2_tools/lib:/home/redi/ws2/install/plansys2_terminal/lib:/home/redi/ws2/install/plansys2_bt_actions/lib:/home/redi/ws2/install/plansys2_executor/lib:/home/redi/ws2/install/plansys2_planner/lib:/home/redi/ws2/install/plansys2_problem_expert/lib:/home/redi/ws2/install/plansys2_domain_expert/lib:/home/redi/ws2/install/plansys2_popf_plan_solver/lib:/home/redi/ws2/install/plansys2_core/lib:/home/redi/ws2/install/plansys2_pddl_parser/lib:/home/redi/ws2/install/plansys2_msgs/lib/jni:/home/redi/ws2/install/plansys2_msgs/lib:/home/redi/ws2/install/example_interfaces/lib/jni:/home/redi/ws2/install/example_interfaces/lib:/home/redi/ws2/install/action_msgs/lib/jni:/home/redi/ws2/install/action_msgs/lib:/home/redi/ws2/install/unique_identifier_msgs/lib/jni:/home/redi/ws2/install/unique_identifier_msgs/lib:/home/redi/ws2/install/trajectory_msgs/lib/jni:/home/redi/ws2/install/trajectory_msgs/lib:/home/redi/ws2/install/stereo_msgs/lib/jni:/home/redi/ws2/install/stereo_msgs/lib:/home/redi/ws2/install/std_srvs/lib/jni:/home/redi/ws2/install/std_srvs/lib:/home/redi/ws2/install/shape_msgs/lib/jni:/home/redi/ws2/install/shape_msgs/lib:/home/redi/ws2/install/sensor_msgs/lib/jni:/home/redi/ws2/install/sensor_msgs/lib:/home/redi/ws2/install/nav_msgs/lib/jni:/home/redi/ws2/install/nav_msgs/lib:/home/redi/ws2/install/diagnostic_msgs/lib/jni:/home/redi/ws2/install/diagnostic_msgs/lib:/home/redi/ws2/install/geometry_msgs/lib/jni:/home/redi/ws2/install/geometry_msgs/lib:/home/redi/ws2/install/actionlib_msgs/lib/jni:/home/redi/ws2/install/actionlib_msgs/lib:/home/redi/ws2/install/std_msgs/lib/jni:/home/redi/ws2/install/std_msgs/lib:/home/redi/ws2/install/statistics_msgs/lib/jni:/home/redi/ws2/install/statistics_msgs/lib:/home/redi/ws2/install/rosgraph_msgs/lib/jni:/home/redi/ws2/install/rosgraph_msgs/lib:/home/redi/ws2/install/rcljava/lib/jni:/home/redi/ws2/install/composition_interfaces/lib/jni:/home/redi/ws2/install/composition_interfaces/lib:/home/redi/ws2/install/rcl_interfaces/lib/jni:/home/redi/ws2/install/rcl_interfaces/lib:/home/redi/ws2/install/plansys2_lifecycle_manager/lib:/home/redi/ws2/install/litter_world_interfaces/lib/jni:/home/redi/ws2/install/litter_world_interfaces/lib:/home/redi/ws2/install/lifecycle_msgs/lib/jni:/home/redi/ws2/install/lifecycle_msgs/lib:/home/redi/ws2/install/builtin_interfaces/lib/jni:/home/redi/ws2/install/builtin_interfaces/lib:/home/redi/ws2/install/rcljava_common/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/redi'), ('OLDPWD', '/home/redi'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GRADLE_HOME', '/opt/gradle/gradle-4.4'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'en_GB.UTF-8'), ('MANAGERPID', '1524'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '32210'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/redi/examples/install:/home/redi/ws2/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'redi'), ('JOURNAL_STREAM', '8:52011'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'redi'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/redi/.local/bin:/opt/gradle/gradle-4.4/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/lenovo:@/tmp/.ICE-unix/1773,unix/lenovo:/tmp/.ICE-unix/1773'), ('INVOCATION_ID', 'f284d5583e2c456b93f2e41b8edcaaea'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_GB.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_GB.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/redi/litter/install/spazza_interfaces:/home/redi/examples/install/test_pkg:/home/redi/examples/install/spazza:/home/redi/examples/install/spazza_interfaces:/home/redi/examples/install/collision_avoidance:/home/redi/examples/install/bdi_spazza:/home/redi/ws2/install/webots_ros2_simulations:/home/redi/ws2/install/ros2_bdi_on_webots:/home/redi/ws2/install/webots_ros2_simulations_interfaces:/home/redi/ws2/install/common_interfaces:/home/redi/ws2/install/visualization_msgs:/home/redi/ws2/install/test_msgs:/home/redi/ws2/install/ros2_bdi_tests:/home/redi/ws2/install/ros2_bdi_on_litter_world:/home/redi/ws2/install/ros2_bdi_skills:/home/redi/ws2/install/ros2_bdi_core:/home/redi/ws2/install/ros2_bdi_utils:/home/redi/ws2/install/plansys2_javaff_plan_solver:/home/redi/ws2/install/javaff:/home/redi/ws2/install/javaff_interfaces:/home/redi/ws2/install/ros2_bdi_interfaces:/home/redi/ws2/install/plansys2_tools:/home/redi/ws2/install/plansys2_terminal:/home/redi/ws2/install/plansys2_bt_actions:/home/redi/ws2/install/plansys2_bringup:/home/redi/ws2/install/plansys2_executor:/home/redi/ws2/install/plansys2_planner:/home/redi/ws2/install/plansys2_problem_expert:/home/redi/ws2/install/plansys2_domain_expert:/home/redi/ws2/install/plansys2_popf_plan_solver:/home/redi/ws2/install/plansys2_core:/home/redi/ws2/install/plansys2_pddl_parser:/home/redi/ws2/install/plansys2_msgs:/home/redi/ws2/install/litter_world:/home/redi/ws2/install/example_interfaces:/home/redi/ws2/install/action_msgs:/home/redi/ws2/install/unique_identifier_msgs:/home/redi/ws2/install/trajectory_msgs:/home/redi/ws2/install/stereo_msgs:/home/redi/ws2/install/std_srvs:/home/redi/ws2/install/shape_msgs:/home/redi/ws2/install/sensor_msgs_py:/home/redi/ws2/install/sensor_msgs:/home/redi/ws2/install/nav_msgs:/home/redi/ws2/install/diagnostic_msgs:/home/redi/ws2/install/geometry_msgs:/home/redi/ws2/install/actionlib_msgs:/home/redi/ws2/install/std_msgs:/home/redi/ws2/install/statistics_msgs:/home/redi/ws2/install/rosgraph_msgs:/home/redi/ws2/install/rcljava:/home/redi/ws2/install/composition_interfaces:/home/redi/ws2/install/rcl_interfaces:/home/redi/ws2/install/plansys2_lifecycle_manager:/home/redi/ws2/install/litter_world_interfaces:/home/redi/ws2/install/lifecycle_msgs:/home/redi/ws2/install/builtin_interfaces:/home/redi/ws2/install/rosidl_default_runtime:/home/redi/ws2/install/rosidl_default_generators:/home/redi/ws2/install/rosidl_generator_java:/home/redi/ws2/install/ros2_bdi_bringup:/home/redi/ws2/install/rcljava_common:/home/redi/ws2/install/ament_cmake_export_jni_libraries:/home/redi/ws2/install/ament_cmake_export_jars:/home/redi/ws2/install/ament_build_type_gradle:/home/redi/ws2/install/ament_java_resources:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_GB.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:7a452a37-2021-46a8-ba56-6eef2583a4d4'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'en_GB.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'en_GB.UTF-8'), ('CLASSPATH', '/home/redi/examples/install/spazza_interfaces/share/spazza_interfaces/java/spazza_interfaces_messages.jar:/home/redi/ws2/install/webots_ros2_simulations_interfaces/share/webots_ros2_simulations_interfaces/java/webots_ros2_simulations_interfaces_messages.jar:/home/redi/ws2/install/visualization_msgs/share/visualization_msgs/java/visualization_msgs_messages.jar:/home/redi/ws2/install/test_msgs/share/test_msgs/java/test_msgs_messages.jar:/home/redi/ws2/install/javaff/share/javaff/java:/home/redi/ws2/install/javaff/share/javaff/java/*:/home/redi/ws2/install/javaff_interfaces/share/javaff_interfaces/java/javaff_interfaces_messages.jar:/home/redi/ws2/install/ros2_bdi_interfaces/share/ros2_bdi_interfaces/java/ros2_bdi_interfaces_messages.jar:/home/redi/ws2/install/plansys2_msgs/share/plansys2_msgs/java/plansys2_msgs_messages.jar:/home/redi/ws2/install/example_interfaces/share/example_interfaces/java/example_interfaces_messages.jar:/home/redi/ws2/install/action_msgs/share/action_msgs/java/action_msgs_messages.jar:/home/redi/ws2/install/unique_identifier_msgs/share/unique_identifier_msgs/java/unique_identifier_msgs_messages.jar:/home/redi/ws2/install/trajectory_msgs/share/trajectory_msgs/java/trajectory_msgs_messages.jar:/home/redi/ws2/install/stereo_msgs/share/stereo_msgs/java/stereo_msgs_messages.jar:/home/redi/ws2/install/std_srvs/share/std_srvs/java/std_srvs_messages.jar:/home/redi/ws2/install/shape_msgs/share/shape_msgs/java/shape_msgs_messages.jar:/home/redi/ws2/install/sensor_msgs/share/sensor_msgs/java/sensor_msgs_messages.jar:/home/redi/ws2/install/nav_msgs/share/nav_msgs/java/nav_msgs_messages.jar:/home/redi/ws2/install/diagnostic_msgs/share/diagnostic_msgs/java/diagnostic_msgs_messages.jar:/home/redi/ws2/install/geometry_msgs/share/geometry_msgs/java/geometry_msgs_messages.jar:/home/redi/ws2/install/actionlib_msgs/share/actionlib_msgs/java/actionlib_msgs_messages.jar:/home/redi/ws2/install/std_msgs/share/std_msgs/java/std_msgs_messages.jar:/home/redi/ws2/install/statistics_msgs/share/statistics_msgs/java/statistics_msgs_messages.jar:/home/redi/ws2/install/rosgraph_msgs/share/rosgraph_msgs/java/rosgraph_msgs_messages.jar:/home/redi/ws2/install/rcljava/share/rcljava/java/hamcrest-all-1.3.jar:/home/redi/ws2/install/rcljava/share/rcljava/java/junit-4.12.jar:/home/redi/ws2/install/rcljava/share/rcljava/java/rcljava.jar:/home/redi/ws2/install/composition_interfaces/share/composition_interfaces/java/composition_interfaces_messages.jar:/home/redi/ws2/install/rcl_interfaces/share/rcl_interfaces/java/rcl_interfaces_messages.jar:/home/redi/ws2/install/litter_world_interfaces/share/litter_world_interfaces/java/litter_world_interfaces_messages.jar:/home/redi/ws2/install/lifecycle_msgs/share/lifecycle_msgs/java/lifecycle_msgs_messages.jar:/home/redi/ws2/install/builtin_interfaces/share/builtin_interfaces/java/builtin_interfaces_messages.jar:/home/redi/ws2/install/rcljava_common/share/rcljava_common/java/rcljava_common.jar:/home/redi/ws2/install/rcljava_common/share/rcljava_common/java/slf4j-jdk14-1.7.21.jar:/home/redi/ws2/install/rcljava_common/share/rcljava_common/java/slf4j-log4j12-1.7.21.jar:/home/redi/ws2/install/rcljava_common/share/rcljava_common/java/log4j-1.2.17.jar:/home/redi/ws2/install/rcljava_common/share/rcljava_common/java/slf4j-api-1.7.21.jar:/home/redi/ws2/install/rcljava_common/share/rcljava_common/java/commons-lang3-3.7.jar'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/redi/litter/build/online_bdi_spazza'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/redi/litter/install/spazza_interfaces/lib/python3.8/site-packages:/home/redi/examples/install/test_pkg/lib/python3.8/site-packages:/home/redi/examples/install/spazza/lib/python3.8/site-packages:/home/redi/examples/install/spazza_interfaces/lib/python3.8/site-packages:/home/redi/examples/install/collision_avoidance/lib/python3.8/site-packages:/home/redi/ws2/install/webots_ros2_simulations/lib/python3.8/site-packages:/home/redi/ws2/install/webots_ros2_simulations_interfaces/lib/python3.8/site-packages:/home/redi/ws2/install/visualization_msgs/lib/python3.8/site-packages:/home/redi/ws2/install/test_msgs/lib/python3.8/site-packages:/home/redi/ws2/install/javaff_interfaces/lib/python3.8/site-packages:/home/redi/ws2/install/ros2_bdi_interfaces/lib/python3.8/site-packages:/home/redi/ws2/install/plansys2_msgs/lib/python3.8/site-packages:/home/redi/ws2/build/litter_world:/home/redi/ws2/install/litter_world/lib/python3.8/site-packages:/home/redi/ws2/install/example_interfaces/lib/python3.8/site-packages:/home/redi/ws2/install/action_msgs/lib/python3.8/site-packages:/home/redi/ws2/install/unique_identifier_msgs/lib/python3.8/site-packages:/home/redi/ws2/install/trajectory_msgs/lib/python3.8/site-packages:/home/redi/ws2/install/stereo_msgs/lib/python3.8/site-packages:/home/redi/ws2/install/std_srvs/lib/python3.8/site-packages:/home/redi/ws2/install/shape_msgs/lib/python3.8/site-packages:/home/redi/ws2/install/sensor_msgs_py/lib/python3.8/site-packages:/home/redi/ws2/install/sensor_msgs/lib/python3.8/site-packages:/home/redi/ws2/install/nav_msgs/lib/python3.8/site-packages:/home/redi/ws2/install/diagnostic_msgs/lib/python3.8/site-packages:/home/redi/ws2/install/geometry_msgs/lib/python3.8/site-packages:/home/redi/ws2/install/actionlib_msgs/lib/python3.8/site-packages:/home/redi/ws2/install/std_msgs/lib/python3.8/site-packages:/home/redi/ws2/install/statistics_msgs/lib/python3.8/site-packages:/home/redi/ws2/install/rosgraph_msgs/lib/python3.8/site-packages:/home/redi/ws2/install/composition_interfaces/lib/python3.8/site-packages:/home/redi/ws2/install/rcl_interfaces/lib/python3.8/site-packages:/home/redi/ws2/install/litter_world_interfaces/lib/python3.8/site-packages:/home/redi/ws2/install/lifecycle_msgs/lib/python3.8/site-packages:/home/redi/ws2/install/builtin_interfaces/lib/python3.8/site-packages:/home/redi/ws2/install/rosidl_generator_java/lib/python3.8/site-packages:/home/redi/ws2/install/ament_build_type_gradle/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'en_GB.UTF-8'), ('LC_PAPER', 'en_GB.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/redi/litter/install/spazza_interfaces:/home/redi/examples/install/spazza_interfaces:/home/redi/examples/install/bdi_spazza:/home/redi/ws2/install/ros2_bdi_on_webots:/home/redi/ws2/install/webots_ros2_simulations_interfaces:/home/redi/ws2/install/common_interfaces:/home/redi/ws2/install/visualization_msgs:/home/redi/ws2/install/test_msgs:/home/redi/ws2/install/ros2_bdi_tests:/home/redi/ws2/install/ros2_bdi_on_litter_world:/home/redi/ws2/install/ros2_bdi_skills:/home/redi/ws2/install/ros2_bdi_core:/home/redi/ws2/install/ros2_bdi_utils:/home/redi/ws2/install/plansys2_javaff_plan_solver:/home/redi/ws2/install/javaff_interfaces:/home/redi/ws2/install/ros2_bdi_interfaces:/home/redi/ws2/install/plansys2_tools:/home/redi/ws2/install/plansys2_terminal:/home/redi/ws2/install/plansys2_bt_actions:/home/redi/ws2/install/plansys2_bringup:/home/redi/ws2/install/plansys2_executor:/home/redi/ws2/install/plansys2_planner:/home/redi/ws2/install/plansys2_problem_expert:/home/redi/ws2/install/plansys2_domain_expert:/home/redi/ws2/install/plansys2_popf_plan_solver:/home/redi/ws2/install/plansys2_core:/home/redi/ws2/install/plansys2_pddl_parser:/home/redi/ws2/install/plansys2_msgs:/home/redi/ws2/install/example_interfaces:/home/redi/ws2/install/action_msgs:/home/redi/ws2/install/unique_identifier_msgs:/home/redi/ws2/install/trajectory_msgs:/home/redi/ws2/install/stereo_msgs:/home/redi/ws2/install/std_srvs:/home/redi/ws2/install/shape_msgs:/home/redi/ws2/install/sensor_msgs:/home/redi/ws2/install/nav_msgs:/home/redi/ws2/install/diagnostic_msgs:/home/redi/ws2/install/geometry_msgs:/home/redi/ws2/install/actionlib_msgs:/home/redi/ws2/install/std_msgs:/home/redi/ws2/install/statistics_msgs:/home/redi/ws2/install/rosgraph_msgs:/home/redi/ws2/install/rcljava:/home/redi/ws2/install/composition_interfaces:/home/redi/ws2/install/rcl_interfaces:/home/redi/ws2/install/plansys2_lifecycle_manager:/home/redi/ws2/install/litter_world_interfaces:/home/redi/ws2/install/lifecycle_msgs:/home/redi/ws2/install/builtin_interfaces:/home/redi/ws2/install/rosidl_default_runtime:/home/redi/ws2/install/rosidl_default_generators:/home/redi/ws2/install/rosidl_generator_java:/home/redi/ws2/install/ros2_bdi_bringup:/home/redi/ws2/install/rcljava_common:/home/redi/ws2/install/ament_cmake_export_jni_libraries:/home/redi/ws2/install/ament_cmake_export_jars:/home/redi/ws2/install/ament_java_resources:/home/redi/examples/install/test_pkg:/home/redi/examples/install/spazza:/home/redi/examples/install/collision_avoidance:/home/redi/ws2/install/webots_ros2_simulations:/home/redi/ws2/install/javaff:/home/redi/ws2/install/litter_world:/home/redi/ws2/install/sensor_msgs_py:/home/redi/ws2/install/ament_build_type_gradle:/opt/ros/foxy')]), 'shell': False}
+[0.079738] (online_bdi_spazza) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.099651] (-) TimerEvent: {}
+[0.131374] (online_bdi_spazza) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.199780] (-) TimerEvent: {}
+[0.300064] (-) TimerEvent: {}
+[0.341789] (online_bdi_spazza) StdoutLine: {'line': b'-- Found rclcpp: 2.4.2 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[0.382613] (online_bdi_spazza) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.385744] (online_bdi_spazza) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[0.400178] (-) TimerEvent: {}
+[0.500465] (-) TimerEvent: {}
+[0.533849] (online_bdi_spazza) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.588587] (online_bdi_spazza) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[0.592791] (online_bdi_spazza) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.600551] (-) TimerEvent: {}
+[0.700821] (-) TimerEvent: {}
+[0.741329] (online_bdi_spazza) StdoutLine: {'line': b'-- Found rclcpp_action: 2.4.2 (/opt/ros/foxy/share/rclcpp_action/cmake)\n'}
+[0.800929] (-) TimerEvent: {}
+[0.814925] (online_bdi_spazza) StdoutLine: {'line': b'-- Found spazza_interfaces: 0.0.0 (/home/redi/litter/install/spazza_interfaces/share/spazza_interfaces/cmake)\n'}
+[0.823230] (online_bdi_spazza) StdoutLine: {'line': b'-- Found plansys2_executor: 2.0.8 (/home/redi/ws2/install/plansys2_executor/share/plansys2_executor/cmake)\n'}
+[0.901082] (-) TimerEvent: {}
+[1.001488] (-) TimerEvent: {}
+[1.101898] (-) TimerEvent: {}
+[1.202304] (-) TimerEvent: {}
+[1.302711] (-) TimerEvent: {}
+[1.403111] (-) TimerEvent: {}
+[1.503510] (-) TimerEvent: {}
+[1.603908] (-) TimerEvent: {}
+[1.704309] (-) TimerEvent: {}
+[1.804704] (-) TimerEvent: {}
+[1.905101] (-) TimerEvent: {}
+[2.005497] (-) TimerEvent: {}
+[2.105897] (-) TimerEvent: {}
+[2.206294] (-) TimerEvent: {}
+[2.306692] (-) TimerEvent: {}
+[2.407086] (-) TimerEvent: {}
+[2.507482] (-) TimerEvent: {}
+[2.607880] (-) TimerEvent: {}
+[2.708277] (-) TimerEvent: {}
+[2.808678] (-) TimerEvent: {}
+[2.909132] (-) TimerEvent: {}
+[3.009540] (-) TimerEvent: {}
+[3.109947] (-) TimerEvent: {}
+[3.210351] (-) TimerEvent: {}
+[3.310752] (-) TimerEvent: {}
+[3.411160] (-) TimerEvent: {}
+[3.511578] (-) TimerEvent: {}
+[3.611990] (-) TimerEvent: {}
+[3.712434] (-) TimerEvent: {}
+[3.812842] (-) TimerEvent: {}
+[3.913290] (-) TimerEvent: {}
+[4.013711] (-) TimerEvent: {}
+[4.114135] (-) TimerEvent: {}
+[4.214563] (-) TimerEvent: {}
+[4.314981] (-) TimerEvent: {}
+[4.415397] (-) TimerEvent: {}
+[4.515815] (-) TimerEvent: {}
+[4.616238] (-) TimerEvent: {}
+[4.716675] (-) TimerEvent: {}
+[4.817093] (-) TimerEvent: {}
+[4.917513] (-) TimerEvent: {}
+[5.017932] (-) TimerEvent: {}
+[5.118350] (-) TimerEvent: {}
+[5.218761] (-) TimerEvent: {}
+[5.319168] (-) TimerEvent: {}
+[5.419575] (-) TimerEvent: {}
+[5.519981] (-) TimerEvent: {}
+[5.620398] (-) TimerEvent: {}
+[5.720809] (-) TimerEvent: {}
+[5.821217] (-) TimerEvent: {}
+[5.921630] (-) TimerEvent: {}
+[6.022034] (-) TimerEvent: {}
+[6.053907] (online_bdi_spazza) StdoutLine: {'line': b'-- Found ros2_bdi_core: 0.0.0 (/home/redi/ws2/install/ros2_bdi_core/share/ros2_bdi_core/cmake)\n'}
+[6.056755] (online_bdi_spazza) StdoutLine: {'line': b'-- Found ros2_bdi_interfaces: 0.0.0 (/home/redi/ws2/install/ros2_bdi_interfaces/share/ros2_bdi_interfaces/cmake)\n'}
+[6.122183] (-) TimerEvent: {}
+[6.222576] (-) TimerEvent: {}
+[6.322933] (-) TimerEvent: {}
+[6.366786] (online_bdi_spazza) StdoutLine: {'line': b'-- Found ros2_bdi_utils: 0.0.0 (/home/redi/ws2/install/ros2_bdi_utils/share/ros2_bdi_utils/cmake)\n'}
+[6.369632] (online_bdi_spazza) StdoutLine: {'line': b'-- Found ros2_bdi_skills: 0.0.0 (/home/redi/ws2/install/ros2_bdi_skills/share/ros2_bdi_skills/cmake)\n'}
+[6.372502] (online_bdi_spazza) StdoutLine: {'line': b'-- Found javaff_interfaces: 0.0.0 (/home/redi/ws2/install/javaff_interfaces/share/javaff_interfaces/cmake)\n'}
+[6.423092] (-) TimerEvent: {}
+[6.523497] (-) TimerEvent: {}
+[6.623876] (-) TimerEvent: {}
+[6.724281] (-) TimerEvent: {}
+[6.824714] (-) TimerEvent: {}
+[6.925133] (-) TimerEvent: {}
+[7.025509] (-) TimerEvent: {}
+[7.125914] (-) TimerEvent: {}
+[7.226274] (-) TimerEvent: {}
+[7.326675] (-) TimerEvent: {}
+[7.427061] (-) TimerEvent: {}
+[7.527535] (-) TimerEvent: {}
+[7.627934] (-) TimerEvent: {}
+[7.728408] (-) TimerEvent: {}
+[7.828811] (-) TimerEvent: {}
+[7.929210] (-) TimerEvent: {}
+[8.029609] (-) TimerEvent: {}
+[8.130005] (-) TimerEvent: {}
+[8.230401] (-) TimerEvent: {}
+[8.330796] (-) TimerEvent: {}
+[8.431193] (-) TimerEvent: {}
+[8.531586] (-) TimerEvent: {}
+[8.632001] (-) TimerEvent: {}
+[8.732401] (-) TimerEvent: {}
+[8.832803] (-) TimerEvent: {}
+[8.933195] (-) TimerEvent: {}
+[9.033599] (-) TimerEvent: {}
+[9.134001] (-) TimerEvent: {}
+[9.234411] (-) TimerEvent: {}
+[9.334819] (-) TimerEvent: {}
+[9.435190] (-) TimerEvent: {}
+[9.535676] (-) TimerEvent: {}
+[9.636081] (-) TimerEvent: {}
+[9.736513] (-) TimerEvent: {}
+[9.836915] (-) TimerEvent: {}
+[9.937313] (-) TimerEvent: {}
+[10.037713] (-) TimerEvent: {}
+[10.138110] (-) TimerEvent: {}
+[10.238506] (-) TimerEvent: {}
+[10.338895] (-) TimerEvent: {}
+[10.439273] (-) TimerEvent: {}
+[10.472456] (online_bdi_spazza) StdoutLine: {'line': b'-- Configuring done\n'}
+[10.480527] (online_bdi_spazza) StderrLine: {'line': b'CMake Error at CMakeLists.txt:38 (add_library):\n'}
+[10.480794] (online_bdi_spazza) StderrLine: {'line': b'  No SOURCES given to target: online_bdi_spazza\n'}
+[10.480940] (online_bdi_spazza) StderrLine: {'line': b'\n'}
+[10.481073] (online_bdi_spazza) StderrLine: {'line': b'\n'}
+[10.481201] (online_bdi_spazza) StderrLine: {'line': b'CMake Generate step failed.  Build files cannot be regenerated correctly.\n'}
+[10.494472] (online_bdi_spazza) StderrLine: {'line': b'make: *** [Makefile:222: cmake_check_build_system] Error 1\n'}
+[10.498498] (online_bdi_spazza) CommandEnded: {'returncode': 2}
+[10.539554] (-) TimerEvent: {}
+[10.635212] (online_bdi_spazza) JobEnded: {'identifier': 'online_bdi_spazza', 'rc': 2}
+[10.640090] (-) TimerEvent: {}
+[10.646230] (-) EventReactorShutdown: {}
