@@ -1,6 +1,0 @@
-source;share/collision_avoidance/hook/pythonpath.ps1
-source;share/collision_avoidance/hook/pythonpath.dsv
-source;share/collision_avoidance/hook/pythonpath.sh
-source;share/collision_avoidance/hook/ament_prefix_path.ps1
-source;share/collision_avoidance/hook/ament_prefix_path.dsv
-source;share/collision_avoidance/hook/ament_prefix_path.sh

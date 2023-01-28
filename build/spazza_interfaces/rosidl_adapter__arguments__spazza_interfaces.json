@@ -1,7 +1,0 @@
-{
-  "package_name": "spazza_interfaces",
-  "non_idl_tuples": [
-    "/home/redi/litter/src/spazza_interfaces:msg/Pose.msg",
-    "/home/redi/litter/src/spazza_interfaces:msg/Position.msg"
-  ]
-}

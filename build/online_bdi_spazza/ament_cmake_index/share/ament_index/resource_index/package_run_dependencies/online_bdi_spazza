@@ -1,1 +1,0 @@
-rclcpp;rclcpp_action;spazza_interfaces;javaff_interfaces;ros2_bdi_interfaces;ros2_bdi_utils;ros2_bdi_core;plansys2_executor;ros2_bdi_skills;ros2_bdi_bringup;ament_lint_auto;ament_lint_common
