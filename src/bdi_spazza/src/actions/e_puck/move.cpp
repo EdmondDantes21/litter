@@ -32,7 +32,7 @@ public:
 
         auto msg = std_msgs::msg::Int16();
         msg.data = arguments[2][1] - '0'; // -'0' trick to convert char to int
-        if (arguments[2][2] > '0' && arguments[2][2] < '9')
+        if (arguments[2][2] >= '0' && arguments[2][2] <= '9')
             msg.data = (arguments[2][1] - '0') * 10 + (arguments[2][2] - '0');
         publisher_->publish(msg);
 

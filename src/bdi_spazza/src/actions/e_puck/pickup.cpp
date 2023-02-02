@@ -16,10 +16,25 @@ public:
 
     float advanceWork()
     {
-        auto msg = std_msgs::msg::Int16();
-        msg.data = 1;
-        publisher_->publish(msg);
+        if (state == 0)
+            publisher_->publish(get_garbage_index());
+
+        state = state == 3 ? 0 : state + 1;
         return 0.25f;
+    }
+
+    std_msgs::msg::Int16 get_garbage_index()
+    {
+        // arguments will be of the following form:
+        //[0]: "e_puck", [1]: "t1", [2]: "g2"
+        std::vector<std::string> arguments = this->getArguments();
+        int garbageIndex = arguments[2][1] - '0';
+        if (arguments[2][2] >= '0' && arguments[2][2] <= '9')
+            garbageIndex = garbageIndex * 10 + (arguments[2][2] - '0');
+
+        auto msg = std_msgs::msg::Int16();
+        msg.data = garbageIndex;
+        return msg;
     }
 
     rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn
@@ -36,6 +51,7 @@ public:
 
 private:
     std::shared_ptr<rclcpp_lifecycle::LifecyclePublisher<std_msgs::msg::Int16>> publisher_;
+    short int state = 0;
 };
 
 int main(int argc, char **argv)
