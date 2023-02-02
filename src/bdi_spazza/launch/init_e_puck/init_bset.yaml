@@ -201,11 +201,11 @@
   params:
     - "b"
     - "t1"
-- name: "at_gar"
-  pddl_type: 2
-  params:
-    - "g1"
-    - "t43"
+# - name: "at_gar"
+#   pddl_type: 2
+#   params:
+#     - "g1"
+#     - "t43"
 #walkable tiles
 - name: "walkable"
   pddl_type: 2
@@ -404,52 +404,6 @@
   params: 
     - "t48"
 #boxes position predicates declaration
-- name: "at_box"
-  pddl_type: 2
-  params: 
-    - "b1"
-    - "t10"
-- name: "at_box"
-  pddl_type: 2
-  params: 
-    - "b2"
-    - "t11"
-- name: "at_box"
-  pddl_type: 2
-  params: 
-    - "b3"
-    - "t12"
-- name: "at_box"
-  pddl_type: 2
-  params: 
-    - "b4"
-    - "t29"
-- name: "at_box"
-  pddl_type: 2
-  params: 
-    - "b5"
-    - "t30"
-- name: "at_box"
-  pddl_type: 2
-  params: 
-    - "b6"
-    - "t32"
-- name: "at_box"
-  pddl_type: 2
-  params: 
-    - "b7"
-    - "t36"
-- name: "at_box"
-  pddl_type: 2
-  params: 
-    - "b8"
-    - "t37"
-- name: "at_box"
-  pddl_type: 2
-  params: 
-    - "b9"
-    - "t39"
-#declaring adjacent tiles
 - name: "adjacent"
   pddl_type: 2
   params: 

@@ -1,33 +1,33 @@
-- condition:
-    clauses:
-      - literals:
-          - check: "F"
-            condition_to_check:
-              name: "at_gar"
-              pddl_type: 2
-              params:
-                - "g1"
-                - "t1"
+# - condition:
+#     clauses:
+#       - literals:
+#           - check: "F"
+#             condition_to_check:
+#               name: "at_gar"
+#               pddl_type: 2
+#               params:
+#                 - "g1"
+#                 - "t1"
 
-          - check: "EX"
-            condition_to_check:
-              name: "g1"
-              pddl_type: 1
-              type: "garbage"
+#           - check: "EX"
+#             condition_to_check:
+#               name: "g1"
+#               pddl_type: 1
+#               type: "garbage"
 
-  reactive_rules:
-    - set: desire
-      operation: ADD
-      value:
-        name: "throw_g1"
-        priority: 0.6
-        deadline: 1000
-        value:
-          - name: "at_gar"
-            pddl_type: 2
-            params:
-              - "g1"
-              - "t1"
+#   reactive_rules:
+#     - set: desire
+#       operation: ADD
+#       value:
+#         name: "throw_g1"
+#         priority: 0.6
+#         deadline: 1000
+#         value:
+#           - name: "at_gar"
+#             pddl_type: 2
+#             params:
+#               - "g1"
+#               - "t1"
 
 - condition:
     clauses:
@@ -42,7 +42,7 @@
     - set: desire
       operation: ADD
       value:
-        name: "throw_g2"
+        name: "throw_new_garbage"
         priority: 0.6
         deadline: 1000
         value:
