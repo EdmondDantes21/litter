@@ -17,8 +17,12 @@ ROBOT_POSITION_UPDATE_RATE = 0.001
 N_TILES = 7
 TILE_SIZE = 0.29  # size of the physical square in the simulation
 HALF_TILE_SIZE = TILE_SIZE / 2
-SPAWN_RATE = 270
+SPAWN_RATE = 800
 ARR_SIZE = 256
+
+'''
+A duck gets spawned every SPAWN_RATE seconds and it never disappears
+'''
 
 class SupervisorController:
     def init(self, webots_node, properties):
@@ -83,16 +87,20 @@ class SupervisorController:
                 self.__children_field.importMFNodeFromString(-1, 'DEF DUCK' + str(
                     self.__duck_count) + ' RubberDuck {translation ' +
                     str(self.get_x_coordinate_from_tile_number(new_position)) + ' ' +
-                    str(self.get_y_coordinate_from_tile_number(new_position)) + ' 0}')
+                    str(self.get_y_coordinate_from_tile_number(new_position)) + ' 0 scale 0.5}')
                 self.__duck_refs[self.__duck_count] = self.__robot.getFromDef('DUCK' + str(self.__duck_count))
                 self.__duck_tiles[self.__duck_count] = new_position
 
-                #push desire to retrieve duck
+                #push belief that there is a new duck which will trigger the reactive rule to add a new desire to retireve it
                 belief = Belief()
                 belief.name = 'at_gar'
                 belief.pddl_type = 2
                 belief.params = ['g' + str(self.__duck_count), 't' + str(new_position)]
                 self.new_garbage_belief_publisher.publish(belief)
+
+                self.__node.get_logger().info('New duck spawned at tile nr. %d' %(new_position))
+
+                #TODO: push the belief that this particular tile is not walkable
                 
                 self.__duck_count += 1
             self.__time += 1
@@ -116,20 +124,12 @@ class SupervisorController:
         self.robot_position_publisher.publish(msg)
 
     def pickup_garbage_callback(self, msg):
+        self.__node.get_logger().info('I was told to remove the duck number %d' %(msg.data))
         if self.__first_duck_done == False:
             self.__duck_refs[0].getField('translation').setSFVec3f([20, 20, 20])
             self.__duck_tiles[0] = -1
-            return
-        #msg.data tells me in which tile the duck to remove is
-        #duck_tiles contain the tile at which each instantiated duck is
-        duck_index = None
-        for i in self.__duck_tiles:
-            if i == msg.data:
-                duck_index = i  
-                self.__duck_tiles[i] = -1
-                break
-
-        self.__duck_refs[duck_index].remove()
+        else:
+            self.__duck_refs[msg.data].remove()
 
     def putdown_garbage_callback(self, msg):
         if self.__first_duck_done == False:
