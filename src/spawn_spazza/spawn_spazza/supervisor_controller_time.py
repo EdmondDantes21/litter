@@ -32,6 +32,7 @@ class SupervisorController:
         self.__duck_tiles = [None] * ARR_SIZE
         # time left (in seconds) before this duck disappears
         self.__duck_time_left = [None] * ARR_SIZE
+        self.__duck_catched = [False] * ARR_SIZE
         self.__occ_tiles = {1, 8, 10, 11, 12, 29, 30, 32, 36, 37, 39}
         self.__first_duck_done = False
 
@@ -112,7 +113,7 @@ class SupervisorController:
     def remove_elapsed_ducks(self):
         i = 0
         while self.__duck_time_left[i] is not None:
-            if self.__duck_time_left[i] == 0:
+            if self.__duck_time_left[i] == 0 and self.__duck_catched[i] == False:
                 self.__duck_refs[i].remove()
                 self.__node.get_logger().info('duck nr. %d removed because it has timed out!' %(i))
 
@@ -145,6 +146,7 @@ class SupervisorController:
             self.__duck_tiles[0] = -1
         else:
             self.__duck_refs[msg.data].remove()
+        self.__duck_catched[msg.data] = True    
 
     def putdown_garbage_callback(self, msg):
         if self.__first_duck_done == False:
