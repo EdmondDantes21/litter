@@ -19,6 +19,7 @@ int main() {
             cout << "(adjacent t" << i << " t" << i - 1 << ")\n";
 
         //diagonals
+        /*
         if (x + 1 < N_TILES && y - 1 >= 0)
             cout << "(adjacent t" << i << " t" << i + N_TILES - 1 << ")\n";
         if (x + 1 < N_TILES && y + 1 < N_TILES)
@@ -27,6 +28,7 @@ int main() {
             cout << "(adjacent t" << i << " t" << i - N_TILES - 1 << ")\n";
         if (x - 1 >= 0 && y + 1 < N_TILES)
             cout << "(adjacent t" << i << " t" << i - N_TILES + 1 << ")\n";
+        */
 	}
     return 0;
 }
