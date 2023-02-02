@@ -5,7 +5,6 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/project
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/RectangleArena.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/factory/containers/protos/WoodenBox.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/drinks/protos/BeerBottle.proto"
 IMPORTABLE EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/toys/protos/RubberDuck.proto"
 
 WorldInfo {
@@ -13,7 +12,7 @@ WorldInfo {
 }
 Viewpoint {
   orientation -0.34237919838987 0.4066755410739037 0.8469896627481105 1.5647738542636689
-  position -0.3735227449123412 -2.7037383799924273 2.501908527622362
+  position -1.1442300872503273 -7.160279164751848 6.872521451606944
 }
 TexturedBackground {
 }
@@ -48,7 +47,7 @@ WoodenBox {
   name "box4"
   size 0.29 0.29 0.29
 }
-WoodenBox {
+DEF test WoodenBox {
   translation -0.270287 -0.291811 0.145
   name "box5"
   size 0.29 0.29 0.29
@@ -141,20 +140,8 @@ DEF e_puck E-puck {
   name "e_puck"
   controller "<extern>"
 }
-DEF trash2 BeerBottle {
-  translation 5.54204 3.55673 -0.01
-  rotation 0 1 0 0
-  name "beer bottle(2)"
-}
 Robot {
   name "supervisor"
   controller "<extern>"
   supervisor TRUE
-}
-DEF TRASH_2 RubberDuck {
-  translation -2.27973 1.38584 -3.55271e-15
-}
-DEF TRASH_1 RubberDuck {
-  translation -0.515355 -0.848947 -3.55271e-15
-  name "rubber duck(1)"
 }

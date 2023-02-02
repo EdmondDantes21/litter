@@ -14,7 +14,7 @@
     - "t1"
     - "t8"
 - name: "adjacent"
-  pddl_type: 2
+  pddl_type: 2a
   params: 
     - "t1"
     - "t2"
