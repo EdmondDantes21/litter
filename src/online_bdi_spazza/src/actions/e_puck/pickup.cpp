@@ -10,20 +10,13 @@ public:
     Pickup()
         : BDIActionExecutor("pickup", 1)
     {
-        publisher_ = this->create_publisher<std_msgs::msg::Int16>("pickup", 4);
-        publisher_->on_activate();
     }
 
     float advanceWork()
     {
-        auto msg = std_msgs::msg::Int16();
-        msg.data = 1;
-        publisher_->publish(msg);
-        return 0.25f;
+        RCLCPP_INFO(this->get_logger(), "picking up...");
+        return 0.025f;
     }
-
-private:
-    std::shared_ptr<rclcpp_lifecycle::LifecyclePublisher<std_msgs::msg::Int16>> publisher_;
 };
 
 int main(int argc, char **argv)

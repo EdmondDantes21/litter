@@ -5,5 +5,5 @@
     - name: "at_gar"
       pddl_type: 2
       params:
-        - "g1"
+        - "g"
         - "t1"

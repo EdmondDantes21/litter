@@ -40,7 +40,7 @@
         :condition (and
             (at start(free ?r))
             (at start (at_gar ?g ?t))
-            (at start (at_rob ?r ?t))
+            ;(at start (at_rob ?r ?t))
         )
         :effect (and
             (at end (not(free ?r)))
@@ -54,7 +54,7 @@
         :duration (= ?duration 1)
         :condition (and
             (over all (at_bin ?b ?t))
-            (over all (at_rob ?r ?t))
+            ;(over all (at_rob ?r ?t))
             (at start (holding ?r ?g))
         )
         :effect (and

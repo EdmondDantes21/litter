@@ -10,15 +10,11 @@ public:
     PutDown()
         : BDIActionExecutor("putdown", 1)
     {
-        publisher_ = this->create_publisher<std_msgs::msg::Int16>("putdown", 4);
-        publisher_->on_activate();
     }
 
     float advanceWork()
     {
-        auto msg = std_msgs::msg::Int16();
-        msg.data = 1;
-        publisher_->publish(msg);
+        RCLCPP_INFO(this->get_logger(), "putting down...");
         return 0.25f;
     }
 

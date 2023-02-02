@@ -35,15 +35,9 @@ set(bdi_sensor_dep
   ros2_bdi_skills
 )
 
-# #add_library(${PROJECT_NAME} SHARED ${CORE-LIB-SOURCES})
-# ament_target_dependencies(${PROJECT_NAME} 
-#   ${bdi_act_client_dep}
-#   spazza_interfaces
+# install(DIRECTORY include/  
+#   DESTINATION include/
 # )
-
-install(DIRECTORY include/  
-  DESTINATION include/
-)
 
 ament_export_include_directories(include)
 ament_export_libraries(${PROJECT_NAME})

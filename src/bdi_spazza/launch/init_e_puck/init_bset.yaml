@@ -5,9 +5,6 @@
 - name: "g1"
   pddl_type: 1
   type: "garbage"
-- name: "g2"
-  pddl_type: 1
-  type: "garbage"
 - name: "b"
   pddl_type: 1  
   type: "bin"

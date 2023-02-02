@@ -22,6 +22,18 @@ public:
         return 0.25f;
     }
 
+    rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn
+    on_activate(const rclcpp_lifecycle::State &previous_state)
+    {
+        return BDIActionExecutor::on_activate(previous_state);
+    }
+
+    rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn
+    on_deactivate(const rclcpp_lifecycle::State &previous_state)
+    {
+        return BDIActionExecutor::on_deactivate(previous_state);
+    }
+
 private:
     std::shared_ptr<rclcpp_lifecycle::LifecyclePublisher<std_msgs::msg::Int16>> publisher_;
 };

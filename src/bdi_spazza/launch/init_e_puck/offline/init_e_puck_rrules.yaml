@@ -1,0 +1,26 @@
+#let's try to add a stupid rule: 
+#if the robot is free (true for most of the simulation) => add desire to throw garbage
+
+- condition:
+  clauses:
+    - literals:
+      - check: "F"
+        condition_to_check:
+        name: "free"
+        pddl_type: 2
+        params:
+          - "e_puck"
+  
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_garbage_from_reactive_rules"
+        priority: 0.9
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g1"
+              - "t1"
