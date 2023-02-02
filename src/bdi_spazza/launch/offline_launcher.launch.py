@@ -44,7 +44,7 @@ def generate_launch_description():
             'desire_ck': [ROBOT_GROUP_NAME],
             'desire_w':  [ROBOT_GROUP_NAME],
             'desire_pr': [0.99],
-            'comp_plan_tries': 16,
+            'comp_plan_tries': 4,
             'exec_plan_tries': 4,
             'reschedule_policy': 'NO_PREEMPT',
             'debug_log_active': ['belief_manager', 'scheduler', 'plan_director']
