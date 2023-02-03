@@ -1,48 +1,22 @@
 - condition:
-  clauses:
-    - literals:
-      - check: "T"
-        condition_to_check:
-        name: "free"
-        pddl_type: 2
-        params:
-          - "e_puck"
-  
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "{x}"
+              pddl_type: 1
+              type: "garbage"
+
   reactive_rules:
     - set: desire
       operation: ADD
       value:
-        name: "throw_garbage_from_reactive_rules_T"
-        priority: 0.9
+        name: "throw_new_garbage"
+        priority: 0.6
         deadline: 1000
         value:
           - name: "at_gar"
             pddl_type: 2
             params:
-              - "g"
+              - "{x}"
               - "t1"
-
-# - condition:
-#   clauses:
-#     - literals:
-#       - check: "F"
-#         condition_to_check:
-#         name: "free"
-#         pddl_type: 2
-#         params:
-#           - "e_puck"
-  
-#   reactive_rules:
-#     - set: desire
-#       operation: ADD
-#       value:
-#         name: "throw_garbage_from_reactive_rules_F"
-#         priority: 0.9
-#         deadline: 1000
-#         value:
-#           - name: "at_gar"
-#             pddl_type: 2
-#             params:
-#               - "g"
-#               - "t1"
-

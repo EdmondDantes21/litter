@@ -20,7 +20,7 @@ def generate_launch_description():
     action_move = AgentAction(
         package='online_bdi_spazza',
         executable='move',
-        name=ROBOT_NAME + '_move',
+        name='move',
         specific_params=[]
     )
     
@@ -28,7 +28,7 @@ def generate_launch_description():
     action_pickup = AgentAction(
         package='online_bdi_spazza',
         executable='pickup',
-        name=ROBOT_NAME + '_pickup',
+        name='pickup',
         specific_params=[]
     )
 
@@ -36,23 +36,21 @@ def generate_launch_description():
     action_putdown = AgentAction(
         package='online_bdi_spazza',
         executable='putdown',
-        name=ROBOT_NAME + '_putdown',
+        name='putdown',
         specific_params=[]
     )
 
     pmode = 'online'
-    reschedule_policy = 'NO_PREEMPT'
-    if pmode == 'online':
-        reschedule_policy = 'CLEAN_PREEMPT'
+    reschedule_policy = 'CLEAN_PREEMPT'
 
-    plastic_agent_ld = AgentLaunchDescription(
+    ld = AgentLaunchDescription(
         agent_id=ROBOT_NAME,    
         agent_group=ROBOT_GROUP_NAME,
         init_params={
             'pddl_file': os.path.join(online_bdi_spazza_share_dir, 'pddl', 'e_puck', 'spazza-domain.pddl'),
             'init_bset': os.path.join(online_bdi_spazza_share_dir, 'launch', 'init_e_puck', 'init_bset.yaml'),
             #'init_dset': os.path.join(online_bdi_spazza_share_dir, 'launch', 'init_e_puck', 'init_dset.yaml'),
-            'init_reactive_rules_set': os.path.join(online_bdi_spazza_share_dir, 'launch', 'init_e_puck', 'init_rrules.yaml'.format(pmode)),
+            'init_reactive_rules_set': os.path.join(online_bdi_spazza_share_dir, 'launch', 'init_e_puck', 'init_rrules.yaml'),
             'planner': 'JAVAFF',
             'comp_plan_tries': 4,
             'exec_plan_tries': 4,
@@ -64,14 +62,9 @@ def generate_launch_description():
             #'sim_to_n': 3,
             'max_null_search_intervals': 16,
             'debug_log_active': ['javaff', 'scheduler', 'event_listener'],
-            'desire_w': [ROBOT_GROUP_NAME],
-            'desire_pr': [ROBOT_GROUP_NAME],
-            'desire_ck': [ROBOT_GROUP_NAME],
-            'belief_ck': [ROBOT_GROUP_NAME],
-            'belief_w': [ROBOT_GROUP_NAME],
         },
         actions=[action_move, action_pickup, action_putdown],
         run_only_psys2=False
     ) 
 
-    return plastic_agent_ld
+    return ld

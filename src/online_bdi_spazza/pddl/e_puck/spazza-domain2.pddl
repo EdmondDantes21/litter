@@ -21,15 +21,15 @@
     )
 
     (:durative-action move
-        :parameters (?r - robot ?from ?to - tile)
+        :parameters (?r - robot ?to -tile)
         :duration (= ?duration 3)
         :condition (and 
-            (at start (at_rob ?r ?from))
-            (over all (adjacent ?from ?to))
+            ;(at start (at_rob ?r ?from))
+            ;(over all (adjacent ?from ?to))
             (over all (walkable ?to))
         )
         :effect (and
-            (at start (not(at_rob ?r ?from)))
+            ;(at start (not(at_rob ?r ?from)))
             (at end (at_rob ?r ?to))
         )
     )
