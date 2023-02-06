@@ -14,7 +14,7 @@ N_TILES = 7
 TILE_SIZE = 0.29  # size of the physical square in the simulation
 HALF_TILE_SIZE = TILE_SIZE / 2
 SPAWN_RATE = 700
-LIFE_SPAN = 500
+LIFE_SPAN = 5000
 ARR_SIZE = 256
 
 '''
