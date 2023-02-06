@@ -21,7 +21,7 @@
     )
 
     (:durative-action move
-        :parameters (?r - robot ?from ?to -tile)
+        :parameters (?r - robot ?from ?to - tile)
         :duration (= ?duration 3)
         :condition (and 
             (at start (at_rob ?r ?from))

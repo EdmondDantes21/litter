@@ -2,9 +2,21 @@
   pddl_type: 1
   type: "robot"
 #garbage and bin declaration
-# - name: "g0"
-#   pddl_type: 1
-#   type: "garbage"
+- name: "g0"
+  pddl_type: 1
+  type: "garbage"
+- name: "g1"
+  pddl_type: 1
+  type: "garbage"
+- name: "g2"
+  pddl_type: 1
+  type: "garbage"
+- name: "g3"
+  pddl_type: 1
+  type: "garbage"
+- name: "g4"
+  pddl_type: 1
+  type: "garbage"
 - name: "b"
   pddl_type: 1  
   type: "bin"
@@ -184,9 +196,7 @@
 - name: "t48"
   pddl_type: 1
   type: "tile"
-#####
-#predicates declaration
-#####
+  
 - name: "at_rob"
   pddl_type: 2
   params:

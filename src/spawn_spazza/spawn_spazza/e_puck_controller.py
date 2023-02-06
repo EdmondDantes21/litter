@@ -92,13 +92,13 @@ class MyRobotDriver:
     def move_callback(self, msg):
         if (msg.data != self.current_tile_target):
             self.current_tile_target = msg.data
-            self.__node.get_logger().info('I was told to move to tile number %d' % (msg.data))
+            self.__node.get_logger().info('moving to tile nr. %d' % (msg.data))
 
             self.target_x = self.get_x_coordinate_from_tile_number(msg.data)
             self.target_y = self.get_y_coordinate_from_tile_number(msg.data)
             delta_y = self.target_y - self.y
             delta_x = self.target_x - self.x
-            self.__node.get_logger().info('delta_x: %f, delta_y: %f' % (delta_x, delta_y))
+            #self.__node.get_logger().info('delta_x: %f, delta_y: %f' % (delta_x, delta_y))
 
             if delta_x == 0:
                 self.target_theta = math.pi / 2 if delta_y > 0 else -math.pi / 2
@@ -113,7 +113,7 @@ class MyRobotDriver:
                     self.target_theta = -math.pi / 2 - \
                         theta if self.target_x < self.x else -math.pi / 2 + theta
 
-            self.__node.get_logger().info('target_theta: %f' % self.target_theta)
+            #self.__node.get_logger().info('target_theta: %f' % self.target_theta)
 
             self.rotating = True
             self.__left_motor.setPosition(float('inf'))

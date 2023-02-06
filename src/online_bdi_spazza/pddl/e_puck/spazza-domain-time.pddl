@@ -18,6 +18,8 @@
         (adjacent ?t1 - tile ?t2 - tile)
         (walkable ?t - tile)
         (holding ?r - robot ?g - garbage)
+        (deleted ?g - garbage)
+        (to_recycle ?g - garbage)
     )
 
     (:durative-action move

@@ -1,0 +1,6000 @@
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g0"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g0"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g0"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_0"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g0"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g0"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_0"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g0"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g1"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g1"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g1"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_1"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g1"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g1"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_1"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g1"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g2"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g2"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g2"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_2"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g2"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g2"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_2"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g2"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g3"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g3"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g3"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_3"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g3"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g3"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_3"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g3"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g4"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g4"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g4"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_4"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g4"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g4"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_4"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g4"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g5"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g5"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g5"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_5"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g5"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g5"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_5"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g5"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g6"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g6"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g6"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_6"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g6"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g6"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_6"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g6"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g7"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g7"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g7"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_7"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g7"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g7"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_7"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g7"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g8"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g8"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g8"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_8"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g8"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g8"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_8"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g8"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g9"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g9"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g9"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_9"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g9"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g9"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_9"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g9"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g10"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g10"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g10"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_10"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g10"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g10"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_10"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g10"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g11"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g11"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g11"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_11"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g11"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g11"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_11"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g11"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g12"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g12"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g12"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_12"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g12"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g12"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_12"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g12"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g13"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g13"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g13"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_13"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g13"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g13"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_13"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g13"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g14"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g14"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g14"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_14"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g14"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g14"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_14"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g14"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g15"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g15"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g15"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_15"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g15"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g15"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_15"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g15"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g16"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g16"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g16"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_16"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g16"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g16"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_16"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g16"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g17"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g17"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g17"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_17"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g17"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g17"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_17"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g17"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g18"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g18"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g18"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_18"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g18"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g18"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_18"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g18"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g19"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g19"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g19"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_19"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g19"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g19"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_19"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g19"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g20"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g20"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g20"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_20"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g20"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g20"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_20"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g20"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g21"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g21"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g21"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_21"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g21"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g21"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_21"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g21"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g22"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g22"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g22"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_22"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g22"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g22"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_22"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g22"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g23"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g23"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g23"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_23"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g23"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g23"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_23"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g23"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g24"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g24"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g24"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_24"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g24"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g24"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_24"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g24"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g25"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g25"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g25"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_25"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g25"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g25"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_25"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g25"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g26"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g26"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g26"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_26"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g26"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g26"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_26"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g26"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g27"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g27"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g27"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_27"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g27"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g27"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_27"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g27"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g28"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g28"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g28"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_28"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g28"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g28"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_28"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g28"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g29"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g29"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g29"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_29"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g29"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g29"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_29"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g29"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g30"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g30"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g30"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_30"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g30"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g30"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_30"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g30"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g31"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g31"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g31"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_31"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g31"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g31"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_31"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g31"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g32"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g32"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g32"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_32"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g32"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g32"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_32"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g32"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g33"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g33"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g33"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_33"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g33"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g33"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_33"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g33"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g34"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g34"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g34"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_34"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g34"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g34"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_34"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g34"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g35"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g35"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g35"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_35"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g35"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g35"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_35"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g35"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g36"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g36"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g36"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_36"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g36"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g36"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_36"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g36"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g37"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g37"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g37"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_37"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g37"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g37"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_37"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g37"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g38"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g38"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g38"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_38"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g38"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g38"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_38"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g38"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g39"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g39"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g39"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_39"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g39"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g39"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_39"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g39"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g40"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g40"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g40"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_40"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g40"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g40"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_40"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g40"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g41"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g41"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g41"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_41"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g41"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g41"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_41"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g41"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g42"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g42"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g42"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_42"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g42"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g42"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_42"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g42"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g43"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g43"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g43"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_43"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g43"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g43"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_43"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g43"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g44"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g44"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g44"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_44"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g44"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g44"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_44"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g44"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g45"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g45"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g45"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_45"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g45"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g45"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_45"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g45"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g46"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g46"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g46"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_46"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g46"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g46"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_46"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g46"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g47"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g47"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g47"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_47"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g47"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g47"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_47"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g47"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g48"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g48"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g48"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_48"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g48"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g48"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_48"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g48"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g49"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g49"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g49"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_49"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g49"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g49"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_49"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g49"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g50"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g50"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g50"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_50"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g50"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g50"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_50"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g50"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g51"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g51"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g51"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_51"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g51"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g51"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_51"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g51"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g52"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g52"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g52"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_52"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g52"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g52"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_52"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g52"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g53"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g53"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g53"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_53"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g53"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g53"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_53"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g53"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g54"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g54"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g54"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_54"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g54"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g54"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_54"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g54"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g55"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g55"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g55"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_55"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g55"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g55"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_55"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g55"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g56"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g56"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g56"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_56"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g56"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g56"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_56"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g56"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g57"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g57"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g57"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_57"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g57"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g57"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_57"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g57"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g58"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g58"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g58"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_58"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g58"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g58"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_58"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g58"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g59"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g59"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g59"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_59"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g59"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g59"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_59"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g59"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g60"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g60"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g60"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_60"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g60"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g60"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_60"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g60"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g61"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g61"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g61"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_61"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g61"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g61"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_61"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g61"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g62"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g62"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g62"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_62"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g62"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g62"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_62"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g62"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g63"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g63"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g63"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_63"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g63"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g63"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_63"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g63"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g64"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g64"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g64"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_64"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g64"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g64"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_64"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g64"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g65"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g65"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g65"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_65"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g65"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g65"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_65"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g65"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g66"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g66"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g66"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_66"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g66"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g66"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_66"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g66"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g67"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g67"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g67"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_67"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g67"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g67"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_67"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g67"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g68"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g68"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g68"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_68"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g68"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g68"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_68"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g68"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g69"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g69"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g69"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_69"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g69"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g69"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_69"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g69"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g70"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g70"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g70"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_70"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g70"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g70"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_70"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g70"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g71"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g71"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g71"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_71"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g71"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g71"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_71"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g71"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g72"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g72"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g72"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_72"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g72"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g72"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_72"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g72"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g73"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g73"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g73"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_73"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g73"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g73"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_73"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g73"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g74"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g74"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g74"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_74"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g74"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g74"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_74"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g74"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g75"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g75"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g75"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_75"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g75"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g75"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_75"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g75"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g76"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g76"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g76"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_76"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g76"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g76"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_76"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g76"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g77"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g77"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g77"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_77"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g77"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g77"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_77"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g77"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g78"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g78"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g78"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_78"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g78"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g78"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_78"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g78"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g79"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g79"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g79"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_79"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g79"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g79"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_79"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g79"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g80"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g80"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g80"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_80"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g80"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g80"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_80"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g80"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g81"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g81"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g81"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_81"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g81"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g81"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_81"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g81"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g82"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g82"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g82"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_82"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g82"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g82"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_82"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g82"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g83"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g83"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g83"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_83"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g83"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g83"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_83"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g83"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g84"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g84"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g84"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_84"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g84"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g84"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_84"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g84"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g85"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g85"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g85"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_85"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g85"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g85"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_85"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g85"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g86"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g86"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g86"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_86"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g86"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g86"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_86"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g86"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g87"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g87"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g87"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_87"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g87"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g87"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_87"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g87"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g88"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g88"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g88"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_88"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g88"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g88"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_88"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g88"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g89"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g89"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g89"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_89"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g89"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g89"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_89"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g89"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g90"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g90"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g90"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_90"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g90"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g90"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_90"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g90"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g91"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g91"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g91"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_91"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g91"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g91"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_91"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g91"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g92"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g92"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g92"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_92"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g92"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g92"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_92"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g92"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g93"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g93"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g93"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_93"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g93"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g93"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_93"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g93"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g94"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g94"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g94"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_94"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g94"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g94"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_94"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g94"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g95"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g95"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g95"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_95"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g95"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g95"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_95"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g95"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g96"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g96"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g96"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_96"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g96"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g96"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_96"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g96"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g97"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g97"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g97"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_97"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g97"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g97"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_97"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g97"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g98"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g98"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g98"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_98"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g98"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g98"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_98"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g98"
+              - "t1"
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "g99"
+              pddl_type: 1
+              type: "garbage"
+
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "g99"
+
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "g99"
+
+  reactive_rules:
+    - set: desire
+      operation: ADD
+      value:
+        name: "throw_new_garbage_99"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g99"
+              - "t1"
+
+- condition:
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "g99"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "throw_new_garbage_99"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "g99"
+              - "t1"

@@ -2,9 +2,9 @@
   pddl_type: 1
   type: "robot"
 #garbage and bin declaration
-# - name: "g0"
-#   pddl_type: 1
-#   type: "garbage"
+- name: "g"
+  pddl_type: 1
+  type: "garbage"
 - name: "b"
   pddl_type: 1  
   type: "bin"

@@ -4,9 +4,11 @@ package_name = 'spawn_spazza'
 data_files = []
 data_files.append(('share/ament_index/resource_index/packages', ['resource/' + package_name]))
 data_files.append(('share/' + package_name + '/launch', ['launch/launcher.launch.py']))
+data_files.append(('share/' + package_name + '/launch', ['launch/launcher_time.launch.py']))
 data_files.append(('share/' + package_name + '/worlds', ['worlds/spawn_litter.wbt']))
 data_files.append(('share/' + package_name + '/resource', ['resource/e_puck.urdf']))
 data_files.append(('share/' + package_name + '/resource', ['resource/supervisor.urdf']))
+data_files.append(('share/' + package_name + '/resource', ['resource/supervisor_time.urdf']))
 data_files.append(('share/' + package_name, ['package.xml']))
 
 setup(

@@ -6,7 +6,7 @@ from builtin_interfaces.msg import Time
 from geometry_msgs.msg import Point
 from spazza_interfaces.msg import Position
 from std_msgs.msg import Int16
-from ros2_bdi_interfaces.msg import Belief
+from ros2_bdi_interfaces.msg import Belief, Desire
 
 import random
 
