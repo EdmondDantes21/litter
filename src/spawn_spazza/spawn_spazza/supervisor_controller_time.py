@@ -4,7 +4,7 @@ from rclpy.node import Node
 from rosgraph_msgs.msg import Clock
 from spazza_interfaces.msg import Position
 from std_msgs.msg import Int16
-from ros2_bdi_interfaces.msg import Belief
+from ros2_bdi_interfaces.msg import Belief, Desire
 
 import random
 
@@ -13,8 +13,8 @@ ROBOT_POSITION_UPDATE_RATE = 0.001
 N_TILES = 7
 TILE_SIZE = 0.29  # size of the physical square in the simulation
 HALF_TILE_SIZE = TILE_SIZE / 2
-SPAWN_RATE = 800
-LIFE_SPAN = 800
+SPAWN_RATE = 700
+LIFE_SPAN = 500
 ARR_SIZE = 256
 
 '''
@@ -35,6 +35,7 @@ class SupervisorController:
         self.__duck_catched = [False] * ARR_SIZE
         self.__occ_tiles = {1, 8, 10, 11, 12, 29, 30, 32, 36, 37, 39}
         self.__first_duck_done = False
+        self.__robot_position = 8
 
         if not rclpy.ok():
             rclpy.init(args=None)
@@ -67,8 +68,18 @@ class SupervisorController:
             self.putdown_garbage_callback,
             4
         )
-        self.new_garbage_belief_publisher = self.__node.create_publisher(
-            Belief, 'e_puck/add_belief', 4)
+        self.new_belief_publisher = self.__node.create_publisher(
+            Belief, '/e_puck/add_belief', 4)
+    
+        self.delete_belief_publisher = self.__node.create_publisher(
+            Belief, '/e_puck/del_belief', 4)
+        
+        self.move_subscription = self.__node.create_subscription(
+            Int16,
+            'e_puck/move',
+            self.move_callback,
+            10
+        )
 
     # called at every time step of the simulation
     def step(self):
@@ -93,10 +104,10 @@ class SupervisorController:
             self.__duck_count) + ' RubberDuck {translation ' +
             str(self.get_x_coordinate_from_tile_number(new_position)) + ' ' +
             str(self.get_y_coordinate_from_tile_number(new_position)) + ' 0 scale 0.5}')
-        self.__duck_refs[self.__duck_count] = self.__robot.getFromDef(
-            'DUCK' + str(self.__duck_count))
         self.__duck_tiles[self.__duck_count] = new_position
         self.__duck_time_left[self.__duck_count] = LIFE_SPAN
+        self.__duck_refs[self.__duck_count] = self.__robot.getFromDef(
+            'DUCK' + str(self.__duck_count))
 
         # push belief that there is a new duck which will trigger
         # the reactive rule to add a new desire to retireve it
@@ -104,9 +115,14 @@ class SupervisorController:
         belief.name = 'at_gar'
         belief.pddl_type = 2
         belief.params = ['g' + str(self.__duck_count), 't' + str(new_position)]
-        self.new_garbage_belief_publisher.publish(belief)
+        self.new_belief_publisher.publish(belief)
 
-        self.__node.get_logger().info('New duck spawned at tile nr. %d' % (new_position))
+        belief.name = 'to_recycle'
+        belief.pddl_type = 2
+        belief.params = ['g' + str(self.__duck_count)]
+        self.new_belief_publisher.publish(belief)
+
+        self.__node.get_logger().info('g%d spawned at t%d' %(self.__duck_count, new_position))
 
         self.__duck_count += 1
 
@@ -115,7 +131,29 @@ class SupervisorController:
         while self.__duck_time_left[i] is not None:
             if self.__duck_time_left[i] == 0 and self.__duck_catched[i] == False:
                 self.__duck_refs[i].remove()
-                self.__node.get_logger().info('duck nr. %d removed because it has timed out!' %(i))
+                self.__node.get_logger().info('g%d timed out!' %(i))
+
+                belief = Belief()
+
+                belief.name = 'to_recycle'
+                belief.pddl_type = 2
+                belief.params = ['g' + str(i)]
+                self.delete_belief_publisher.publish(belief)
+
+                belief.name = 'deleted'
+                belief.pddl_type = 2
+                belief.params = ['g' + str(i)]
+                self.new_belief_publisher.publish(belief)
+
+                belief.name = 'free'
+                belief.pddl_type = 2
+                belief.params = ['e_puck']
+                self.new_belief_publisher.publish(belief)
+
+                belief.name = 'holding'
+                belief.pddl_type = 2
+                belief.params = ['e_puck', 'g' + str(i)]
+                self.delete_belief_publisher.publish(belief)
 
             self.__duck_time_left[i] -= 1
             i += 1
@@ -139,13 +177,15 @@ class SupervisorController:
         self.robot_position_publisher.publish(msg)
 
     def pickup_garbage_callback(self, msg):
-        self.__node.get_logger().info('Duck nr. %d removed.' % (msg.data))
+        self.__node.get_logger().info('g%d removed.' % (msg.data))
         if self.__first_duck_done == False:
             self.__duck_refs[0].getField(
                 'translation').setSFVec3f([20, 20, 20])
             self.__duck_tiles[0] = -1
         else:
             self.__duck_refs[msg.data].remove()
+        
+        #self.__occ_tiles.remove(self.__duck_tiles[msg.data])
         self.__duck_catched[msg.data] = True    
 
     def putdown_garbage_callback(self, msg):
@@ -153,6 +193,16 @@ class SupervisorController:
             self.__first_duck_done = True
             self.__duck_refs[0].getField(
                 'translation').setSFVec3f([-0.496798, 0.97926, 0])
+        
+        #delete belief that the garbage needs to be recycled
+        belief = Belief()
+        belief.name = 'to_recycle'
+        belief.pddl_type = 2
+        belief.params = ['g' + str(msg.data)]
+        self.delete_belief_publisher.publish(belief)
+
+    def move_callback(self, msg):
+        self.__robot_position = msg.data
 
     # x coordinates given tile number
     @staticmethod

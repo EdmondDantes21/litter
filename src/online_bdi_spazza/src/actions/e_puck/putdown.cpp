@@ -21,12 +21,26 @@ public:
     {   
         progress += 0.25;   
         if (progress == 1.0) {
-            auto msg = std_msgs::msg::Int16();
-            msg.data = 1;
-            publisher_->publish(msg);
+            publisher_->publish(get_garbage_index());
             progress = 0.0;
         }
         return 0.25f;
+    }
+
+    std_msgs::msg::Int16 get_garbage_index()
+    {
+        // arguments will be of the following form:
+        //[0]: "e_puck", [1]: "t1", [2]: "b",  [3]: "g2"
+        std::vector<std::string> arguments = this->getArguments();
+        int garbageIndex = arguments[3][1] - '0';
+        if (arguments[3][2] >= '0' && arguments[3][2] <= '9')
+            garbageIndex = garbageIndex * 10 + (arguments[3][2] - '0');
+
+        RCLCPP_INFO(this->get_logger(), "putting down g%d", garbageIndex);
+
+        auto msg = std_msgs::msg::Int16();
+        msg.data = garbageIndex;
+        return msg;
     }
 
     rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn

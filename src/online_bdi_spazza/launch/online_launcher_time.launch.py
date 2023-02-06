@@ -41,16 +41,16 @@ def generate_launch_description():
     )
 
     pmode = 'online'
-    reschedule_policy = 'PREEMPT'
+    reschedule_policy = 'CLEAN_PREEMPT'
 
     ld = AgentLaunchDescription(
         agent_id=ROBOT_NAME,    
         agent_group=ROBOT_GROUP_NAME,
         init_params={
-            'pddl_file': os.path.join(online_bdi_spazza_share_dir, 'pddl', 'e_puck', 'spazza-domain.pddl'),
-            'init_bset': os.path.join(online_bdi_spazza_share_dir, 'launch', 'init_e_puck', 'init_bset.yaml'),
+            'pddl_file': os.path.join(online_bdi_spazza_share_dir, 'pddl', 'e_puck', 'spazza-domain-time.pddl'),
+            'init_bset': os.path.join(online_bdi_spazza_share_dir, 'launch', 'init_e_puck', 'init_bset_time.yaml'),
             #'init_dset': os.path.join(online_bdi_spazza_share_dir, 'launch', 'init_e_puck', 'init_dset.yaml'),
-            'init_reactive_rules_set': os.path.join(online_bdi_spazza_share_dir, 'launch', 'init_e_puck', 'init_rrules.yaml'),
+            'init_reactive_rules_set': os.path.join(online_bdi_spazza_share_dir, 'launch', 'init_e_puck', 'init_rrules_time.yaml'),
             'planner': 'JAVAFF',
             'comp_plan_tries': 4,
             'exec_plan_tries': 4,

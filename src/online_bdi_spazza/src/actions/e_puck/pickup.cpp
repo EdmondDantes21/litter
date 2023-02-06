@@ -32,6 +32,8 @@ public:
         if (arguments[2][2] >= '0' && arguments[2][2] <= '9')
             garbageIndex = garbageIndex * 10 + (arguments[2][2] - '0');
 
+        RCLCPP_INFO(this->get_logger(), "picking up duck nr. %d", garbageIndex);
+
         auto msg = std_msgs::msg::Int16();
         msg.data = garbageIndex;
         return msg;
