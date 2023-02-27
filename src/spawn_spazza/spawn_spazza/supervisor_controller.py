@@ -17,7 +17,7 @@ ROBOT_POSITION_UPDATE_RATE = 0.001
 N_TILES = 7
 TILE_SIZE = 0.29  # size of the physical square in the simulation
 HALF_TILE_SIZE = TILE_SIZE / 2
-SPAWN_RATE = 800
+SPAWN_RATE = 8000
 ARR_SIZE = 256
 
 '''

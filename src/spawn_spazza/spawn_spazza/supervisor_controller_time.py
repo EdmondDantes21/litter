@@ -13,9 +13,10 @@ ROBOT_POSITION_UPDATE_RATE = 0.001
 N_TILES = 7
 TILE_SIZE = 0.29  # size of the physical square in the simulation
 HALF_TILE_SIZE = TILE_SIZE / 2
-SPAWN_RATE = 700
-LIFE_SPAN = 5000
+SPAWN_RATE = 400
+LIFE_SPAN = 800
 ARR_SIZE = 256
+DUCKS_SPAWNED = 4
 
 '''
 A duck gets spawned every SPAWN_RATE seconds and it disappears after LIFE_SPAN seconds if it doesnt get caught
@@ -36,6 +37,12 @@ class SupervisorController:
         self.__occ_tiles = {1, 8, 10, 11, 12, 29, 30, 32, 36, 37, 39}
         self.__first_duck_done = False
         self.__robot_position = 8
+
+        self.__avg_retrieve_time = -1.0
+        self.__total_time = 0.0
+        self.__miss_rate = -1
+        self.__ducks_catched_count = 0
+        self.__ducks_missed_count = 0
 
         if not rclpy.ok():
             rclpy.init(args=None)
@@ -90,7 +97,7 @@ class SupervisorController:
         if self.__time != msg.clock.sec:
             self.remove_elapsed_ducks()
 
-            if self.__time % SPAWN_RATE == 0:
+            if self.__time % SPAWN_RATE == 0 and self.__duck_count < DUCKS_SPAWNED:
                 self.spawn_new_duck()
             self.__time += 1
 
@@ -155,8 +162,11 @@ class SupervisorController:
                 belief.params = ['e_puck', 'g' + str(i)]
                 self.delete_belief_publisher.publish(belief)
 
+                self.update_metrics(False, -1)
+
             self.__duck_time_left[i] -= 1
             i += 1
+            
 
     def robot_position_timer_callback(self):
         position = self.__e_puck.getPosition()
@@ -201,6 +211,8 @@ class SupervisorController:
         belief.params = ['g' + str(msg.data)]
         self.delete_belief_publisher.publish(belief)
 
+        self.update_metrics(True, self.__duck_time_left[msg.data])
+
     def move_callback(self, msg):
         self.__robot_position = msg.data
 
@@ -221,3 +233,18 @@ class SupervisorController:
         half_board = (N_TILES // 2) * TILE_SIZE + \
             HALF_TILE_SIZE  # half of the board
         return half_board - distance_from_margin
+    
+    def update_metrics(self, catched, time):
+        if (catched == False):
+            self.__ducks_missed_count += 1
+        else:
+            self.__ducks_catched_count += 1
+            self.__total_time += time
+            #update avg retrieve time
+            self.__avg_retrieve_time = self.__total_time / self.__duck_count
+                
+        
+        self.__miss_rate = (self.__ducks_catched_count + self.__ducks_missed_count) / self.__duck_count
+        self.__node.get_logger().info('miss_rate = %f' %(self.__miss_rate))
+        self.__node.get_logger().info('avg_retrieve_time = %f' %(self.__avg_retrieve_time))
+

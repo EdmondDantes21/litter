@@ -18,20 +18,9 @@
         (adjacent ?t1 - tile ?t2 - tile)
         (walkable ?t - tile)
         (holding ?r - robot ?g - garbage)
-        (is_not_being_retrieved ?g - garbage)
+        (deleted ?g - garbage)
+        (to_recycle ?g - garbage)
     )
-
-    (:durative-action book_garbage
-        :parameters (?r - robot ?g - garbage)
-        :duration (= ?duration 0)
-        :condition (and 
-            (over all (is_not_being_retrieved ?g))
-        )
-        :effect (and 
-            (at end (not (is_not_being_retrieved ?g)))
-        )
-    )
-    
 
     (:durative-action move
         :parameters (?r - robot ?from ?to - tile)
@@ -43,7 +32,7 @@
         )
         :effect (and
             (at start (not(at_rob ?r ?from)))
-            (at end (at_rob ?r ?to))
+            (at start (at_rob ?r ?to))
         )
     )
 

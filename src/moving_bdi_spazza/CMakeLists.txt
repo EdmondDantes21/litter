@@ -1,35 +1,69 @@
 cmake_minimum_required(VERSION 3.5)
 project(moving_bdi_spazza)
 
-# Default to C99
-if(NOT CMAKE_C_STANDARD)
-  set(CMAKE_C_STANDARD 99)
-endif()
-
-# Default to C++14
-if(NOT CMAKE_CXX_STANDARD)
-  set(CMAKE_CXX_STANDARD 14)
-endif()
-
-if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-  add_compile_options(-Wall -Wextra -Wpedantic)
-endif()
+# Default to C++17
+set(CMAKE_CXX_STANDARD 17)
 
 # find dependencies
-find_package(ament_cmake REQUIRED)
-# uncomment the following section in order to fill in
-# further dependencies manually.
-# find_package(<dependency> REQUIRED)
+find_package(ament_cmake REQUIRED) 
+find_package(rclcpp REQUIRED)
+find_package(rclcpp_action REQUIRED)
+find_package(spazza_interfaces REQUIRED)
+find_package(plansys2_executor REQUIRED)
+find_package(ros2_bdi_core REQUIRED)
+find_package(ros2_bdi_interfaces REQUIRED)
+find_package(ros2_bdi_utils REQUIRED)
+find_package(ros2_bdi_skills REQUIRED)
+find_package(javaff_interfaces REQUIRED)
 
-if(BUILD_TESTING)
-  find_package(ament_lint_auto REQUIRED)
-  # the following line skips the linter which checks for copyrights
-  # uncomment the line when a copyright and license is not present in all source files
-  #set(ament_cmake_copyright_FOUND TRUE)
-  # the following line skips cpplint (only works in a git repo)
-  # uncomment the line when this package is not in a git repo
-  #set(ament_cmake_cpplint_FOUND TRUE)
-  ament_lint_auto_find_test_dependencies()
-endif()
+include_directories(include)
+
+set(bdi_act_client_dep
+  rclcpp
+  plansys2_executor
+  ros2_bdi_core
+  ros2_bdi_interfaces
+  ros2_bdi_utils
+  ros2_bdi_skills
+  javaff_interfaces
+)
+
+set(bdi_sensor_dep
+  rclcpp
+  ros2_bdi_interfaces
+  ros2_bdi_utils
+  ros2_bdi_skills
+)
+
+# install(DIRECTORY include/  
+#   DESTINATION include/
+# )
+
+ament_export_include_directories(include)
+ament_export_libraries(${PROJECT_NAME})
+ament_export_dependencies(${dependencies})
+
+add_executable(move src/actions/move.cpp)
+ament_target_dependencies(move ${bdi_act_client_dep})
+
+add_executable(pickup src/actions/pickup.cpp)
+ament_target_dependencies(pickup ${bdi_act_client_dep})
+
+add_executable(putdown src/actions/putdown.cpp)
+ament_target_dependencies(putdown ${bdi_act_client_dep})
+
+install(TARGETS
+  move
+  pickup
+  putdown
+  
+  DESTINATION lib/${PROJECT_NAME}
+)
+
+install(DIRECTORY
+  launch
+  pddl
+  DESTINATION share/${PROJECT_NAME}
+)
 
 ament_package()

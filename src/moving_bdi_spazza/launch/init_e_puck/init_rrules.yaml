@@ -1,0 +1,61 @@
+#push desire when belief that new garbage exists arrives
+- condition:
+    clauses:
+      - literals:
+          - check: "EX"
+            condition_to_check:
+              name: "{x}"
+              pddl_type: 1
+              type: "garbage"
+          
+          - check: "T"
+            condition_to_check:
+              name: "to_recycle"
+              pddl_type: 2
+              params:
+                - "{x}"
+          
+          - check: "F"
+            condition_to_check:
+              name: "deleted"
+              pddl_type: 2
+              params:
+                - "{x}"
+
+  reactive_rules: 
+    - set: desire
+      operation: ADD
+      value:
+        name: "recycle_{x}"
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "{x}"
+              - "t1"
+#delete desire to retrieve garbage when the belief that it no longer exists is pushed
+- condition:  
+    clauses:
+      - literals:
+        - check: "T"
+          condition_to_check:
+            name: "deleted"
+            pddl_type: 2
+            params:
+              - "{x}"
+
+  reactive_rules:
+    - set: desire
+      operation: DEL
+      value:
+        name: "recycle_{x}" 
+        priority: 0.6
+        deadline: 1000
+        value:
+          - name: "at_gar"
+            pddl_type: 2
+            params:
+              - "{x}"
+              - "t1"

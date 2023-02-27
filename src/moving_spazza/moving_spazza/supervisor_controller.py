@@ -13,9 +13,12 @@ ROBOT_POSITION_UPDATE_RATE = 0.001
 N_TILES = 7
 TILE_SIZE = 0.29  # size of the physical square in the simulation
 HALF_TILE_SIZE = TILE_SIZE / 2
-SPAWN_RATE = 700
-LIFE_SPAN = 5000
+QUARTER_TILE_SIZE = HALF_TILE_SIZE / 2
 ARR_SIZE = 256
+
+SPAWN_RATE = 400
+LIFE_SPAN = 800
+DUCKS_SPAWNED = 4
 
 '''
 A duck gets spawned every SPAWN_RATE seconds and it disappears after LIFE_SPAN seconds if it doesnt get caught
@@ -27,7 +30,7 @@ class SupervisorController:
         self.__time = 0
 
         self.__e_puck = self.__robot.getFromDef('e_puck')
-        self.__e_puck_2 = self.__robot.getFromDef('e_puck_2')
+        self.__e_puck2 = self.__robot.getFromDef('e_puck_2')
         self.__duck_count = 0
         self.__duck_refs = [None] * ARR_SIZE
         self.__duck_tiles = [None] * ARR_SIZE
@@ -37,6 +40,11 @@ class SupervisorController:
         self.__occ_tiles = {1, 8, 10, 11, 12, 29, 30, 32, 36, 37, 39}
         self.__first_duck_done = False
         self.__robot_position = 8
+
+        self.__avg_retrieve_time = -1.0
+        self.__miss_rate = -1
+        self.__ducks_catched_count = 0
+        self.__ducks_missed_count = 0
 
         if not rclpy.ok():
             rclpy.init(args=None)
@@ -50,6 +58,7 @@ class SupervisorController:
             self.clock_callback,
             10
         )
+        self.clock_subscription  # prevent unused variable warning
 
         self.robot_position_publisher = self.__node.create_publisher(
             Position, 'robot_position', 32)
@@ -92,7 +101,7 @@ class SupervisorController:
         if self.__time != msg.clock.sec:
             self.remove_elapsed_ducks()
 
-            if self.__time % SPAWN_RATE == 0:
+            if self.__time % SPAWN_RATE == 0 and self.__duck_count < DUCKS_SPAWNED:
                 self.spawn_new_duck()
             self.__time += 1
 
@@ -130,8 +139,8 @@ class SupervisorController:
 
     def remove_elapsed_ducks(self):
         i = 0
-        while self.__duck_time_left[i] is not None:
-            if self.__duck_time_left[i] == 0 and self.__duck_catched[i] == False:
+        while i < ARR_SIZE:
+            if self.__duck_time_left[i] is not None and self.__duck_time_left[i] == 0 and self.__duck_catched[i] == False:
                 self.__duck_refs[i].remove()
                 self.__node.get_logger().info('g%d timed out!' %(i))
 
@@ -157,8 +166,17 @@ class SupervisorController:
                 belief.params = ['e_puck', 'g' + str(i)]
                 self.delete_belief_publisher.publish(belief)
 
-            self.__duck_time_left[i] -= 1
+                belief.name = 'e_puck'
+                belief.pddl_type = 1
+                self.delete_belief_publisher.publish(belief)
+                belief.params = []
+
+                self.update_metrics(False, -1)
+
+            if self.__duck_time_left[i] is not None:
+                self.__duck_time_left[i] -= 1
             i += 1
+            
 
     def robot_position_timer_callback(self):
         position = self.__e_puck.getPosition()
@@ -177,10 +195,10 @@ class SupervisorController:
         msg.theta = orientation_values[3]
 
         self.robot_position_publisher.publish(msg)
-        
-        #e_puck_2
-        position = self.__e_puck_2.getPosition()
-        orientation = self.__e_puck_2.getField('rotation')  # get angle
+
+        #epuck2
+        position = self.__e_puck2.getPosition()
+        orientation = self.__e_puck2.getField('rotation')  # get angle
         orientation_values = orientation.getSFRotation()
 
         if orientation_values[2] < 0:
@@ -198,12 +216,12 @@ class SupervisorController:
 
     def pickup_garbage_callback(self, msg):
         self.__node.get_logger().info('g%d removed.' % (msg.data))
-        if self.__first_duck_done == False:
-            self.__duck_refs[0].getField(
-                'translation').setSFVec3f([20, 20, 20])
-            self.__duck_tiles[0] = -1
-        else:
-            self.__duck_refs[msg.data].remove()
+        # if self.__first_duck_done == False:
+        #     self.__duck_refs[0].getField(
+        #         'translation').setSFVec3f([20, 20, 20])
+        #     self.__duck_tiles[0] = -1
+        # else:
+        self.__duck_refs[msg.data].remove()
         
         #self.__occ_tiles.remove(self.__duck_tiles[msg.data])
         self.__duck_catched[msg.data] = True    
@@ -211,8 +229,8 @@ class SupervisorController:
     def putdown_garbage_callback(self, msg):
         if self.__first_duck_done == False:
             self.__first_duck_done = True
-            self.__duck_refs[0].getField(
-                'translation').setSFVec3f([-0.496798, 0.97926, 0])
+            #self.__duck_refs[0].getField(
+                #'translation').setSFVec3f([-0.496798, 0.97926, 0])
         
         #delete belief that the garbage needs to be recycled
         belief = Belief()
@@ -220,6 +238,8 @@ class SupervisorController:
         belief.pddl_type = 2
         belief.params = ['g' + str(msg.data)]
         self.delete_belief_publisher.publish(belief)
+
+        self.update_metrics(True, LIFE_SPAN - self.__duck_time_left[msg.data])
 
     def move_callback(self, msg):
         self.__robot_position = msg.data
@@ -231,7 +251,7 @@ class SupervisorController:
             HALF_TILE_SIZE  # distance from the top margin
         half_board = (N_TILES // 2) * TILE_SIZE + \
             HALF_TILE_SIZE  # half of the board
-        return -(half_board - distance_from_margin)
+        return -(half_board - distance_from_margin) + QUARTER_TILE_SIZE
 
     # y coordinates given tile number
     @staticmethod
@@ -240,4 +260,21 @@ class SupervisorController:
         distance_from_margin = (i // N_TILES) * TILE_SIZE + HALF_TILE_SIZE
         half_board = (N_TILES // 2) * TILE_SIZE + \
             HALF_TILE_SIZE  # half of the board
-        return half_board - distance_from_margin
+        return half_board - distance_from_margin - QUARTER_TILE_SIZE
+    
+    def update_metrics(self, catched, time):
+        if (catched == False):
+            self.__ducks_missed_count += 1
+        else:
+            self.__ducks_catched_count += 1
+            #update avg retrieve time
+            if self.__ducks_catched_count > 1:
+                self.__avg_retrieve_time = (self.__avg_retrieve_time * (self.__ducks_catched_count - 1) + time) / (self.__ducks_catched_count)
+            else:
+                self.__avg_retrieve_time = time
+             
+        
+        self.__miss_rate = 1.0 - ((self.__ducks_catched_count) / (self.__ducks_catched_count + self.__ducks_missed_count))
+        self.__node.get_logger().info('miss_rate = %f' %(self.__miss_rate))
+        self.__node.get_logger().info('avg_retrieve_time = %f' %(self.__avg_retrieve_time))
+

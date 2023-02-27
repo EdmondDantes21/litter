@@ -3,11 +3,22 @@
 <package format="3">
   <name>moving_bdi_spazza</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
-  <maintainer email="redi.vreto@studenti.unitn.it">redi</maintainer>
-  <license>TODO: License declaration</license>
+  <description>Offline planner ROS2-BDI side</description>
+  <maintainer email="redi.vreto@studenti.unitn.it">Redi</maintainer>
+  <license>License declaration of pkg online_bdi_spazza</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>rclcpp_action</depend>
+  <depend>spazza_interfaces</depend>
+  <depend>javaff_interfaces</depend>
+  <depend>ros2_bdi_interfaces</depend>
+  <depend>ros2_bdi_utils</depend>
+  <depend>ros2_bdi_core</depend>
+  <depend>plansys2_executor</depend>
+  <depend>ros2_bdi_skills</depend>
+  <depend>ros2_bdi_bringup</depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>

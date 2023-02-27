@@ -8,7 +8,7 @@ import math
 
 ADMISSIBLE_ERROR = 0.03
 ADMISSIBLE_ERROR_POSITION = 0.003
-MAX_ANGULAR_SPEED = 0.1
+MAX_ANGULAR_SPEED = 0.05
 MAX_LINEAR_SPEED = 6.28
 MIN_LINEAR_SPEED = 2.0
 TILE_SIZE = 0.29  # size of the physical square in the simulation
@@ -16,7 +16,7 @@ HALF_TILE_SIZE = TILE_SIZE / 2
 N_TILES = 7
 LEFT = 1
 RIGHT = -1
-MOVE_RATE = 120
+MOVE_RATE = 360
 
 class MyRobotDriver:
     def init(self, webots_node, properties):
@@ -29,6 +29,10 @@ class MyRobotDriver:
         self.target_theta = 0.0
         self.diff_theta = 0.0
         self.distance = 0.0
+        self.theta = 0.0
+        self.x = 0.0
+        self.y = 0.0
+        self.z = 0.0
 
         self.__time = 0
 
