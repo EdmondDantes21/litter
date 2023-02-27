@@ -18,20 +18,11 @@
         (adjacent ?t1 - tile ?t2 - tile)
         (walkable ?t - tile)
         (holding ?r - robot ?g - garbage)
-        (is_not_being_retrieved ?g - garbage)
+        (deleted ?g - garbage)
+        (to_recycle ?g - garbage)
+        (busy ?r - robot)
+        (not_busy ?r - robot)
     )
-
-    (:durative-action book_garbage
-        :parameters (?r - robot ?g - garbage)
-        :duration (= ?duration 0)
-        :condition (and 
-            (over all (is_not_being_retrieved ?g))
-        )
-        :effect (and 
-            (at end (not (is_not_being_retrieved ?g)))
-        )
-    )
-    
 
     (:durative-action move
         :parameters (?r - robot ?from ?to - tile)
@@ -40,10 +31,13 @@
             (at start (at_rob ?r ?from))
             (over all (adjacent ?from ?to))
             (over all (walkable ?to))
+            (at start (not_busy ?r))
         )
         :effect (and
             (at start (not(at_rob ?r ?from)))
-            (at end (at_rob ?r ?to))
+            (at start (at_rob ?r ?to))
+            (at start (not(not_busy ?r)))
+            (at end (not_busy ?r))
         )
     )
 
@@ -51,14 +45,14 @@
         :parameters (?r - robot ?t - tile ?g - garbage)
         :duration (= ?duration 1)
         :condition (and
-            (at start(free ?r))
             (at start (at_gar ?g ?t))
             (at start (at_rob ?r ?t))
         )
         :effect (and
-            (at end (not(free ?r)))
             (at end (not(at_gar ?g ?t)))
             (at end (holding ?r ?g))
+            (at start (not(not_busy ?r)))
+            (at end (not_busy ?r))
         )
     )
 
@@ -69,11 +63,13 @@
             (over all (at_bin ?b ?t))
             (over all (at_rob ?r ?t))
             (at start (holding ?r ?g))
+            (at start (not_busy ?r))
         )
         :effect (and
-            (at end(free ?r))
             (at end(at_gar ?g ?t))
             (at end (not(holding ?r ?g)))
+            (at start (not(not_busy ?r)))
+            (at end (not_busy ?r))
         )
     )
 )

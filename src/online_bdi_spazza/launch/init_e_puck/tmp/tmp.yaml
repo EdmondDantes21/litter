@@ -1,4 +1,4 @@
-  - condition:
+- condition:
     clauses:
       - literals:
           - check: "EX"

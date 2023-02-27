@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<robot name="e_puck_2">
+    <webots>
+        <plugin type="moving_spazza.e_puck_2_controller.MyRobotDriver" webots_robot_name="e_puck_2"/>
+    </webots>
+</robot>    
